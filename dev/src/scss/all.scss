@@ -24,6 +24,7 @@ body{
 	position:relative;
 	color:$body_color;
 	background:$body_bg;
+	background: #000;
 }
 a{
 	color:$link_color;
@@ -103,6 +104,10 @@ input, textarea {
 		display: table;
 		clear: both;
 	}
+}
+
+.col-disabled {
+	display: none;
 }
 
 .wrapper{

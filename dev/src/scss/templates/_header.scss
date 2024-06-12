@@ -6,3 +6,38 @@
 // @import 'includes/plugins';
 
 
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10vw;
+    .col{
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                span{
+                    color: white;
+                }
+                .ellipse{
+                    width: 4px;
+                    height: 4px;
+                    background: white;
+                    opacity: 0.5;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
