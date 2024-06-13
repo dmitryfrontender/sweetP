@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // position: relative;
     margin: 0 10vw;
     .col{
         .navbar{
@@ -22,6 +23,11 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
+                svg{
+                    fill: white;
+                    width: 18px;
+                    height: 18px;
+                }
                 span{
                     color: white;
                 }
@@ -36,7 +42,92 @@
 
         }
     }
+    .second{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .mobile-box{
+            display: none;
+        }
+    }
+    .search-box{
+        width: clamp(100px, 20vw, 371px);
+        height: 60px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+
+        background: rgba(60, 60, 60, 0.20);
+        padding: 10px;
+        backdrop-filter: blur(75px);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        position: relative;
+
+        flex-shrink: 0;
+
+        input{
+            width: 100%;
+            height: 100%;
+            padding: 16px 3px 16px 20px;
+       
+            background: none;
+
+            border: none;
+            
+        }
+        .btn-search{
+            // max-width: 54px;
+            // max-height: 54px;
+            width: 50px;
+            height: 100%;
+            border: 3px solid rgba(255, 255, 255, 0.20);
+            border-radius: 50%;
+            background: linear-gradient(136deg, rgba(177, 177, 177, 0.32) 5.24%, rgba(54, 53, 103, 0.20) 51.01%), #FFC01D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+
+                stroke: white;
+                fill: #FFC01D;
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+       
+    }
 }
+
+@media screen and (max-width: 1024px) {
+    .header{
+        .second{
+            display: none;
+           
+        } 
+        .mobile-box{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            button{
+                border: none;
+                background: none;
+                cursor: pointer;
+                svg{
+                    fill: transparent;
+                    stroke: white;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+         
+        }   
+    }
+    
+}
+
+
 
 
 

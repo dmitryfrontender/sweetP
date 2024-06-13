@@ -147,6 +147,11 @@ input.placeholder, textarea.placeholder {
 	align-items: center;
 	gap: 10px;
 }
+.header .col .navbar a svg {
+	fill: white;
+	width: 18px;
+	height: 18px;
+}
 .header .col .navbar a span {
 	color: white;
 }
@@ -156,4 +161,72 @@ input.placeholder, textarea.placeholder {
 	background: white;
 	opacity: 0.5;
 	border-radius: 50%;
+}
+.header .second {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.header .second .mobile-box {
+	display: none;
+}
+.header .search-box {
+	width: clamp(100px, 20vw, 371px);
+	height: 60px;
+	border-radius: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(60, 60, 60, 0.2);
+	padding: 10px;
+	-webkit-backdrop-filter: blur(75px);
+	        backdrop-filter: blur(75px);
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+}
+.header .search-box input {
+	width: 100%;
+	height: 100%;
+	padding: 16px 3px 16px 20px;
+	background: none;
+	border: none;
+}
+.header .search-box .btn-search {
+	width: 50px;
+	height: 100%;
+	border: 3px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	background: linear-gradient(136deg, rgba(177, 177, 177, 0.32) 5.24%, rgba(54, 53, 103, 0.2) 51.01%), #FFC01D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .search-box .btn-search svg {
+	stroke: white;
+	fill: #FFC01D;
+	width: 20px;
+	height: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+	.header .second {
+		display: none;
+	}
+	.header .mobile-box {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	.header .mobile-box button {
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	.header .mobile-box button svg {
+		fill: transparent;
+		stroke: white;
+		width: 30px;
+		height: 30px;
+	}
 }
