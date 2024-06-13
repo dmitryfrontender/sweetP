@@ -1,14 +1,19 @@
+// fonts
+@import "includes/fonts";
+// @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
+
 // variables
 @import "includes/variables";
+
 // custom mixins
 @import "includes/mixins";
+
 // res css
 @import "includes/res";
 // @import "includes/normalize";
+
 // media quaries
 @import "includes/media-queries";
-// fonts
-// @include font-face('Ico Moon', '../fonts/icomoon', normal, normal);
 
 html{
 	height:100%;
