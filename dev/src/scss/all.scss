@@ -136,24 +136,11 @@ h2 {
 	font-weight: 500;
 	line-height: normal;
 }
-//icon
-// [class^="icon-"], [class*=" icon-"] {
-// 	/* use !important to prevent issues with browser extensions that change fonts */
-// 	font-family: 'Ico Moon' !important;
-// 	font-size: 12px;
-// 	speak: none;
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	font-variant: normal;
-// 	text-transform: none;
-// 	line-height: 1;
 
-// 	/* Better Font Rendering =========== */
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
-// }
 
-// @include max-screen(1000px) {}
+
+// template css
+@import "templates/pagination";
 
 // template css
 @import "templates/header";

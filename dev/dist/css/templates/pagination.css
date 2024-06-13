@@ -1,0 +1,101 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.pagination li span,
+.pagination li a {
+	color: #FFF;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 100%;
+}
+.pagination .prev span,
+.pagination .prev a,
+.pagination .next span,
+.pagination .next a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	background: linear-gradient(136deg, rgba(177, 177, 177, 0.32) 5.24%, rgba(54, 53, 103, 0.2) 51.01%), #FFC01D;
+	padding: 17px 27px;
+	gap: 5px;
+}
+.pagination .prev .svg-icon,
+.pagination .next .svg-icon {
+	width: 9px;
+	height: 16px;
+	fill: #fff;
+	opacity: 0.5;
+}
+.pagination .prev .svg-icon:first-child {
+	opacity: 1;
+}
+.pagination .prev .svg-icon:last-child {
+	opacity: 0.33;
+}
+.pagination .next .svg-icon:first-child {
+	opacity: 0.33;
+}
+.pagination .next .svg-icon:last-child {
+	opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+	.pagination .page:hover span,
+	.pagination .page:hover a,
+	.pagination .current:hover span,
+	.pagination .current:hover a,
+	.pagination .last:hover span,
+	.pagination .last:hover a {
+		background-color: #393939;
+	}
+}
+.pagination .page span,
+.pagination .page a,
+.pagination .current span,
+.pagination .current a,
+.pagination .last span,
+.pagination .last a {
+	background-color: #262626;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 17px 22px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pagination .current span,
+.pagination .current a {
+	border-color: #FFC01D;
+}
+.pagination .jump span,
+.pagination .jump a {
+	padding: 17px 12px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@media screen and (max-width: 991px) {
+	.pagination .page {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.pagination .jump {
+		display: none;
+	}
+	.pagination .prev span,
+	.pagination .prev a,
+	.pagination .next span,
+	.pagination .next a,
+	.pagination .last span,
+	.pagination .last a,
+	.pagination .current span,
+	.pagination .current a {
+		padding: 10px 17px;
+	}
+}
