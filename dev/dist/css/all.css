@@ -79,6 +79,7 @@ body {
 	position: relative;
 	color: #000;
 	background: #fff;
+	background: #000;
 }
 
 a {
@@ -141,9 +142,210 @@ input.placeholder, textarea.placeholder {
 	color: #999 !important;
 }
 
+.col-disabled {
+	display: none;
+}
+
 .wrapper {
 	display: table;
 	width: 100%;
 	height: 100%;
 	table-layout: fixed;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 10vw;
+}
+.header .col .navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2vw;
+}
+.header .col .navbar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.header .col .navbar a svg {
+	fill: white;
+	width: 18px;
+	height: 18px;
+}
+.header .col .navbar a span {
+	color: white;
+}
+.header .col .navbar a .ellipse {
+	width: 4px;
+	height: 4px;
+	background: white;
+	opacity: 0.5;
+	border-radius: 50%;
+}
+.header .second {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.header .second .mobile-box {
+	display: none;
+}
+.header .search-box {
+	width: clamp(100px, 20vw, 371px);
+	height: 60px;
+	border-radius: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(60, 60, 60, 0.2);
+	padding: 10px;
+	-webkit-backdrop-filter: blur(75px);
+	        backdrop-filter: blur(75px);
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+}
+.header .search-box input {
+	width: 100%;
+	height: 100%;
+	padding: 16px 3px 16px 20px;
+	background: none;
+	border: none;
+}
+.header .search-box .btn-search {
+	width: 50px;
+	height: 100%;
+	border: 3px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	background: linear-gradient(136deg, rgba(177, 177, 177, 0.32) 5.24%, rgba(54, 53, 103, 0.2) 51.01%), #FFC01D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .search-box .btn-search svg {
+	stroke: white;
+	fill: #FFC01D;
+	width: 20px;
+	height: 20px;
+}
+.header .mobile-box {
+	display: none;
+}
+
+.mobile-nav {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.header {
+		margin: 0 5vw;
+	}
+	.header .second {
+		display: none;
+	}
+	.header .mobile-box {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	.header .mobile-box button {
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	.header .mobile-box button svg {
+		fill: transparent;
+		stroke: white;
+		width: 30px;
+		height: 30px;
+	}
+	.mobile-nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.6);
+		-webkit-backdrop-filter: blur(25px);
+		        backdrop-filter: blur(25px);
+	}
+	.mobile-nav .wrapper {
+		width: 90vw;
+		margin: 0 auto;
+	}
+	.mobile-nav .wrapper .top-block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 20px 0 30px;
+	}
+	.mobile-nav .wrapper .top-block .col .logo svg {
+		width: clamp(150px, 35vw, 250px);
+	}
+	.mobile-nav .wrapper .top-block .mobile-box {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	.mobile-nav .wrapper .top-block .mobile-box button {
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	.mobile-nav .wrapper .top-block .mobile-box button svg {
+		fill: transparent;
+		stroke: white;
+		width: clamp(15px, 5vw, 25px);
+		height: clamp(15px, 5vw, 25px);
+	}
+	.mobile-nav .wrapper .top-block .mobile-box .btn-close {
+		display: none;
+		padding: 20px 20px 15px;
+		border-radius: 50%;
+		background: #262626;
+		-webkit-backdrop-filter: blur(10px);
+		        backdrop-filter: blur(10px);
+	}
+	.mobile-nav .wrapper nav {
+		margin-top: 50px;
+	}
+	.mobile-nav .wrapper nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10vh;
+	}
+	.mobile-nav .wrapper nav ul li a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		gap: 10px;
+	}
+	.mobile-nav .wrapper nav ul li a svg {
+		fill: white;
+		width: 18px;
+		height: 18px;
+	}
+	.mobile-nav .wrapper nav ul li a span {
+		color: #FFF;
+		font-family: Jost-medium;
+		font-size: clamp(18px, 2vw, 22px);
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	.mobile-nav .wrapper nav ul li a .ellipse {
+		height: 4px;
+		width: 4px;
+		border-radius: 50%;
+		background: #FFF;
+		opacity: 0.5;
+	}
 }
