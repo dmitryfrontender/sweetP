@@ -32,7 +32,7 @@
 }
 
 .thumbs {
-	margin: 0 -10px -20px;
+	margin: 0 -10px 26px;
 	font-size: 0;
 
 	.col {
@@ -41,6 +41,18 @@
 		vertical-align: top;
 		font-size: 14px;
 		padding: 0 10px 24px;
+
+        @media screen and (max-width: 1200px) {
+            width: 33.33%;
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
 	}
 }
 
