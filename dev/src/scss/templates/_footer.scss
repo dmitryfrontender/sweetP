@@ -179,3 +179,27 @@ footer{
     }
     
 }
+
+@media screen and (max-width: 768px) {
+
+    footer{
+        .footer {
+            &-top{
+                .footer-wrap{
+                    .item{
+                        line-height: inherit;
+
+                        h1{
+                            font-size: clamp(50px, 15vw, 100px);
+                        }
+                        h3{
+                            font-size: clamp(30px, 10vw,60px);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    
+}

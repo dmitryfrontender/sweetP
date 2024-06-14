@@ -663,3 +663,14 @@ footer .footer-bottom .footer-wrap .footer-light {
 		flex-direction: column;
 	}
 }
+@media screen and (max-width: 768px) {
+	footer .footer-top .footer-wrap .item {
+		line-height: inherit;
+	}
+	footer .footer-top .footer-wrap .item h1 {
+		font-size: clamp(50px, 15vw, 100px);
+	}
+	footer .footer-top .footer-wrap .item h3 {
+		font-size: clamp(30px, 10vw, 60px);
+	}
+}
