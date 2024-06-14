@@ -41,7 +41,7 @@ footer{
 
                     p{
                         color: #6F6858;
-                        font-family: SF-medium;
+                        font-family: sf-medium;
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 400;
@@ -51,7 +51,7 @@ footer{
 
                     }
                 }
-                
+
             }
         }
     }
@@ -73,13 +73,11 @@ footer{
             p{
                 color: #6F6858;
                 text-align: center;
-                // leading-trim: both;
-                // text-edge: cap;
                 font-family: sf-regular;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 150%; /* 21px */
+                line-height: 150%;
             }
 
 
@@ -93,7 +91,7 @@ footer{
                     align-items: center;
                     gap: 10px;
                     color: white;
-                    font-family: Jost-medium;
+                    font-family: jost-medium, sans-serif;
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 500;
@@ -116,7 +114,7 @@ footer{
             .footer-info{
                 width: 80%;
                 text-align: center;
-                
+
             }
             .footer-light{
                 width: 575px;
@@ -130,11 +128,11 @@ footer{
             }
 
 
-    
+
         }
 
     }
-  
+
 
 }
 
@@ -177,7 +175,7 @@ footer{
             }
         }
     }
-    
+
 }
 
 @media screen and (max-width: 768px) {
@@ -201,5 +199,5 @@ footer{
             }
         }
     }
-    
+
 }

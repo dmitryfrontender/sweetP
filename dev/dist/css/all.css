@@ -451,7 +451,7 @@ h2 {
 	}
 	.mobile-nav .wrapper nav ul li a span {
 		color: #FFF;
-		font-family: Jost-medium;
+		font-family: jost-medium, sans-serif;
 		font-size: clamp(18px, 2vw, 22px);
 		font-style: normal;
 		font-weight: 500;
@@ -486,6 +486,23 @@ h2 {
 }
 .heading + .tags-list {
 	margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+	.heading {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 18px;
+	}
+	.heading .sort-box {
+		margin-left: 0;
+		width: 100%;
+	}
+	.heading .sort-box-wrapper {
+		width: 100%;
+	}
+	.heading .sort-box-wrapper label {
+		width: 33.3%;
+	}
 }
 
 .thumbs {
@@ -744,7 +761,7 @@ footer .footer-top .footer-wrap .item .description {
 }
 footer .footer-top .footer-wrap .item .description p {
 	color: #6F6858;
-	font-family: SF-medium;
+	font-family: sf-medium;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -772,7 +789,7 @@ footer .footer-bottom .footer-wrap p {
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 150%; /* 21px */
+	line-height: 150%;
 }
 footer .footer-bottom .footer-wrap .navbar {
 	display: flex;
@@ -785,7 +802,7 @@ footer .footer-bottom .footer-wrap .navbar a {
 	align-items: center;
 	gap: 10px;
 	color: white;
-	font-family: Jost-medium;
+	font-family: jost-medium, sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
@@ -854,5 +871,236 @@ footer .footer-bottom .footer-wrap .footer-light {
 	}
 	footer .footer-top .footer-wrap .item h3 {
 		font-size: clamp(30px, 10vw, 60px);
+	}
+}
+.player-wrap {
+	position: relative;
+	padding-bottom: 48.7%;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 18px;
+}
+
+.player-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+.player-overlay button {
+	border-radius: 50%;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.player-overlay button .play-button {
+	width: 124px;
+	height: 124px;
+}
+@media screen and (max-width: 1023px) {
+	.player-overlay button .play-button {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.kt-player {
+	position: absolute;
+	inset: 0;
+}
+
+.video-wrapper .info-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+@media screen and (max-width: 1024px) {
+	.video-wrapper .info-top {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+}
+.video-wrapper .info-cols .inner-row,
+.video-wrapper .info-cols .row {
+	margin-bottom: 18px;
+}
+.video-wrapper .headline {
+	color: #FFF;
+	font-family: jost-regular, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	overflow: hidden;
+}
+.video-wrapper .headline .title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+	.video-wrapper .headline {
+		font-size: 20px;
+		line-height: 24px;
+		width: 100%;
+		overflow: initial;
+	}
+	.video-wrapper .headline .title {
+		overflow: initial;
+		text-overflow: initial;
+		white-space: initial;
+	}
+}
+.video-wrapper .sharing-container {
+	flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+	.video-wrapper .sharing-container {
+		width: 100%;
+	}
+}
+.video-wrapper .sharing-container .list-btns {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+@media screen and (max-width: 1024px) {
+	.video-wrapper .sharing-container .list-btns li {
+		flex-basis: 50%;
+	}
+}
+.video-wrapper .sharing-container .button {
+	color: #FFF;
+	text-align: center;
+	font-family: sf-medium, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	display: flex;
+	height: 45px;
+	padding: 5px 20px 5px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	border-radius: 18px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #262626;
+}
+.video-wrapper .sharing-container .button svg {
+	width: 24px;
+	height: 24px;
+}
+.video-wrapper .info-cols-top {
+	margin-bottom: 18px;
+}
+.video-wrapper .list-info {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 18px;
+}
+.video-wrapper .list-info li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: 0.28px;
+}
+@media screen and (max-width: 1023px) {
+	.video-wrapper .list-info li {
+		padding: 5px 20px 5px 8px;
+	}
+}
+.video-wrapper .list-info li svg {
+	margin-right: 4px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	height: 20px;
+	width: 20px;
+	fill: #494949;
+}
+.video-wrapper .info-name {
+	color: #FFF;
+	font-family: jost-regular, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+	margin-bottom: 4px;
+}
+.video-wrapper .text-description {
+	color: #6F6858;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.36px;
+}
+@media screen and (max-width: 1023px) {
+	.video-wrapper .text-description {
+		font-size: 16px;
+	}
+}
+.video-wrapper .list-btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+.video-wrapper .list-btn .item .btn {
+	display: flex;
+	padding: 10px 15px 10px 10px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #262626;
+	color: #FFF;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.36px;
+	white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+	.video-wrapper .list-btn .item .btn:hover {
+		background: #393939;
+	}
+}
+.video-wrapper .list-btn .item .btn svg {
+	width: 20px;
+	height: 20px;
+	fill: #FFF;
+}
+.video-wrapper .list-link {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+.video-wrapper .list-link .item {
+	color: #6F6858;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 130%;
+	letter-spacing: 0.36px;
+}
+.video-wrapper .list-link .item a {
+	text-decoration: underline;
+	color: inherit;
+}
+@media screen and (min-width: 1024px) {
+	.video-wrapper .list-link .item a:hover {
+		text-decoration: none;
+		color: #FFC01D;
 	}
 }
