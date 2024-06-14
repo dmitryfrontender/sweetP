@@ -29,6 +29,25 @@
 	& + .tags-list {
 		margin-bottom: 10px;
 	}
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        .sort-box {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .sort-box-wrapper {
+            width: 100%;
+
+            label {
+                width: 33.3%;
+            }
+        }
+    }
 }
 
 .thumbs {
