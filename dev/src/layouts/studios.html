@@ -1,0 +1,50 @@
+{{> header pageTitle="Studios"}}
+
+<section class="section">
+	<div class="container">
+		<div class="heading">
+			<h2 class="title-name">Студии</h2>
+			<div class="sort-box">
+				<div class="sort-box-wrapper">
+                    <form action="#" class="sort-form">
+                        <div class="form-group">
+                            <input type="radio" name="filter" value="new" id="sort-new" checked="checked">
+                            <label for="sort-new">
+                                Все
+                            </label>
+
+                            <input type="radio" name="filter" value="popular" id="sort-popular">
+                            <label for="sort-popular">
+                                По алфавиту
+                            </label>
+
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</div>
+
+		
+
+        <div class="thumbs thumbs-studios">
+            {{#repeat 4}}
+                <div class="col">
+                    {{> thumb-studio image="/images/studio1.png" title="TeamSkeet" }}
+                </div>
+                <div class="col">
+                    {{> thumb-studio image="/images/studio2.png" title="TeamSkeet" }}
+                </div>
+                <div class="col">
+                    {{> thumb-studio image="/images/studio3.png" title="TeamSkeet" }}
+                </div>
+                <div class="col">
+                    {{> thumb-studio image="/images/studio4.png" title="TeamSkeet" }}
+                </div>
+            {{/repeat}}
+		</div>
+
+        {{> pagination}}
+	</div>
+</section>
+
+{{> footer}}
