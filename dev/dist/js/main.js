@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	//calls functions
 	mobileButtonsHandle();
+	setNavItem();
 });
 
 $(window).on('load', function () {
@@ -32,4 +33,21 @@ function mobileButtonsHandle () {
 			$('body').css('overflow', 'auto');
 		});
 	}
+}
+
+function setNavItem () {
+	$('.nav-item').on('click', function() {
+
+		const id = $(this).data('id');
+
+		$('.nav-item').each(function() {
+			if (id === +this.dataset.id) {
+				$(this).addClass('active-nav');
+			} else {
+				$(this).removeClass('active-nav');
+			}
+
+		});
+
+	})
 }

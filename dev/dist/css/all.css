@@ -302,10 +302,25 @@ h2 {
 	opacity: 0.5;
 	border-radius: 50%;
 }
+.header .col .navbar .active-nav .svg-icon {
+	fill: #FFC01D;
+	stroke: #FFC01D;
+}
+.header .col .navbar .active-nav .ellipse {
+	background: #FFC01D;
+}
 .header .second {
 	display: flex;
 	align-items: center;
 	gap: 20px;
+}
+.header .second .nav-text {
+	color: #FFF;
+	font-family: Jost-medium;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 .header .second .mobile-box {
 	display: none;
@@ -360,7 +375,7 @@ h2 {
 	.header {
 		margin: 0 5vw;
 	}
-	.header .second {
+	.header .second, .header .third {
 		display: none;
 	}
 	.header .mobile-box {
@@ -390,6 +405,7 @@ h2 {
 		background: rgba(0, 0, 0, 0.6);
 		-webkit-backdrop-filter: blur(25px);
 		        backdrop-filter: blur(25px);
+		z-index: 5;
 	}
 	.mobile-nav .wrapper {
 		width: 90vw;

@@ -39,6 +39,16 @@
                     border-radius: 50%;
                 }
             }
+            .active-nav{
+                .svg-icon{
+                    fill: #FFC01D;
+                    stroke: #FFC01D;
+                }
+                .ellipse{
+                    background: #FFC01D;
+
+                }
+            }
 
         }
     }
@@ -46,6 +56,16 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        .nav-text{
+            color: #FFF;
+            font-family: Jost-medium;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+        }
         .mobile-box{
             display: none;
         }
@@ -109,7 +129,7 @@
 @media screen and (max-width: 1024px) {
     .header{
         margin: 0 5vw;
-        .second{
+        .second, .third{
             display: none;
 
 
@@ -145,6 +165,7 @@
         height: 100vh;
         background: rgba(0, 0, 0, 0.60);
         backdrop-filter: blur(25px);
+        z-index: 5;
         .wrapper{
             width: 90vw;
             margin: 0 auto;
