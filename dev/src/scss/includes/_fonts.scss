@@ -3,20 +3,15 @@
     src: url('../fonts/sf-pro-display-medium.woff2') format('woff2'),
          url('../fonts/sf-pro-display-medium.woff') format('woff'),
          url('../fonts/sf-pro-display-medium.svg#sf_pro_displaymedium') format('svg');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
     font-family: 'sf_pro_displayregular';
     src: url('../fonts/sf-pro-display-regular.woff2') format('woff2'),
          url('../fonts/sf-pro-display-regular.woff') format('woff'),
          url('../fonts/sf-pro-display-regular.svg#sf_pro_displayregular') format('svg');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
-
 }
