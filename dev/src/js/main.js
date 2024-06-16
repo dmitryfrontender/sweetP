@@ -26,9 +26,11 @@ function mobileButtonsHandle () {
 	}
 
 	if ($('.btn-close').length) {
-		$('.btn-close').on('click', function () {
+		$('.btn-close').on('click', function (event) {
 			$('.mobile-nav').css('display', 'none');
-			$('.btn-search').css('display', 'block');
+			if (!event.target.closest('.main-header')) {
+				$('.btn-search').css('display', 'block');
+			}
 			$('.btn-burger').css('display', 'block');
 			$('.btn-close').css('display', 'none');
 			$('body').css('overflow', 'auto');

@@ -53,6 +53,12 @@ footer{
                 }
 
             }
+            .image-item{
+                overflow: hidden;
+                img{
+                    max-width: 610px;
+                }
+            }
         }
     }
     .footer-bottom{
