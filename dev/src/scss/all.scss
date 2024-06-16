@@ -121,6 +121,199 @@ input, textarea {
 	height: 100%;
 	table-layout: fixed;
 }
+.index-title{
+	text-align: center;
+	margin-bottom: 40px;
+	h1{
+		margin-top: 4vw;
+		display: inline-block;
+		color: #FFF;
+		text-align: center;
+		// leading-trim: both;
+		// text-edge: cap;
+		font-family: Jost-regular;
+		font-size: clamp(35px, 5vw, 100px);
+		// font-size: 100px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 70px; /* 70% */
+	}
+	.accent{
+		color: #FFC01D;
+		// leading-trim: both;
+		// text-edge: cap;
+		font-family: Jost-medium;
+		// font-size: 100px;
+		font-size: clamp(35px, 5vw, 100px);
+
+		font-style: normal;
+		font-weight: 600;
+		line-height: 70px;
+		text-transform: uppercase;
+
+
+	}
+	span{
+		display: block;
+		color: #FFF;
+		font-family: Jost;
+		font-size: clamp(16px, 2vw, 28px);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 70px;
+		text-transform: uppercase;
+		margin-bottom: 2vw;
+	}
+	.input-block{
+		position: relative;
+		.input{
+			position: relative;
+			width: clamp(320px, 40vw, 688px);
+			margin: 0 auto;
+			input{
+				color: #FFF;
+				font-family: "SF Pro Display";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 24px */
+				border-radius: 50px;
+				border: 1px solid rgba(255, 255, 255, 0.10);
+				background: rgba(60, 60, 60, 0.20);
+				backdrop-filter: blur(75px);
+				padding: 16px 20px;
+				width: 100%;
+			}
+			button{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #FFC01D;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				transform: translate(-30%, 20%);
+				cursor: pointer;
+				position: absolute;
+				top: 0;
+				right: 0;
+				svg{
+					stroke: white;
+					fill: #FFC01D;
+					width: 20px;
+					height: 20px;
+				}
+			}
+			
+		}
+		.search-list{
+			display: none;
+			position: absolute;
+			top: 100%;
+			z-index: 5;
+			border-radius: 20px;
+			border: 1px solid rgba(255, 255, 255, 0.10);
+			background: rgba(60, 60, 60, 0.80);
+			width: clamp(320px, 40vw, 688px);
+			backdrop-filter: blur(75px);
+			margin-top: 5px;
+			left: 50%;
+			padding: 8px;
+			transform: translateX(-50%);
+			ul{
+				display: flex;
+				flex-direction: column;
+				justify-self: flex-start;
+				gap: 10px;
+				li{
+					display: flex;
+					justify-content: space-between;
+					padding: 0 12px;
+
+					cursor: pointer;
+					.message{
+						text-align: left;
+						span{
+							color: rgba(255, 255, 255, 0.50);
+							font-family: "SF Pro Display";
+							font-size: clamp(12px, 2vw, 16px);
+							font-style: normal;
+							font-weight: 400;
+							line-height: 150%;
+							display: inline-block;
+						}
+						.accent-list{
+							color: #FFF;
+						}
+					}
+					
+				}
+				li:hover{
+					border-radius: 50px;
+					background: #595959;
+
+				}
+			}
+
+		}
+		.search-list-active{
+			display: block;
+		}
+		@media screen and (max-width: 1024px) {
+			.search-list{
+				width: clamp(310px, 80vw, 688px);
+			}
+		}
+		
+	}
+}
+.title-block{
+	text-align: center;
+	margin: 70px auto 30px;
+	.accent{
+		color: #FFC01D;
+	}
+	h1{
+		display: inline-block;
+		color: #FFF;
+		font-family: Jost-medium;
+		font-size: clamp(30px, 5vw, 72px);
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+
+	}
+	span{
+		max-width: 50%;
+		margin: 0 auto;
+		color: #FFF;
+		text-align: center;
+		font-family: Jost-regular;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+	}
+	.mobile-description{
+		display: none;
+	}
+	@media screen and (max-width: 1024px) {
+		.description{
+			display: none;
+		}
+
+		.mobile-description{
+			display: block;
+			max-width: 100%;
+			padding-top: 10px;
+			color: #969696;
+		}
+
+		
+	}
+}
 
 .container {
     max-width: 1460px;
