@@ -126,6 +126,23 @@
     display: none;
 }
 
+.main-header{
+    .third{
+        width: clamp(100px, 20vw, 371px);
+        .search-box{
+            display: none;
+        }
+    }
+
+    .mobile-box{
+        .btn-search{
+            display: none;
+        }
+    }
+   
+}
+
+
 @media screen and (max-width: 1024px) {
     .header{
         margin: 0 5vw;
@@ -173,7 +190,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin: 20px 0 30px;
+                // margin: 20px 0 30px;
                 .col{
                     .logo{
                         svg{
@@ -198,9 +215,7 @@
                     }
                     .btn-close{
                         display: none;
-                        // width: 40px;
-                        // height: 40px;
-                        padding: 20px 20px 15px;
+                        padding: 15px 15px 10px;
                         border-radius: 50%;
                         background: #262626;
                         backdrop-filter: blur(10px);

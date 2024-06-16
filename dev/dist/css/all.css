@@ -1,13 +1,13 @@
 @font-face {
 	font-family: "sf_pro_displaymedium";
 	src: url("../fonts/sf-pro-display-medium.woff2") format("woff2"), url("../fonts/sf-pro-display-medium.woff") format("woff"), url("../fonts/sf-pro-display-medium.svg#sf_pro_displaymedium") format("svg");
-	font-weight: normal;
+	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
 	font-family: "sf_pro_displayregular";
 	src: url("../fonts/sf-pro-display-regular.woff2") format("woff2"), url("../fonts/sf-pro-display-regular.woff") format("woff"), url("../fonts/sf-pro-display-regular.svg#sf_pro_displayregular") format("svg");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, button, input, p, blockquote, th, td {
@@ -584,6 +584,16 @@ h2 {
 	display: none;
 }
 
+.main-header .third {
+	width: clamp(100px, 20vw, 371px);
+}
+.main-header .third .search-box {
+	display: none;
+}
+.main-header .mobile-box .btn-search {
+	display: none;
+}
+
 @media screen and (max-width: 1024px) {
 	.header {
 		margin: 0 5vw;
@@ -628,7 +638,6 @@ h2 {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin: 20px 0 30px;
 	}
 	.mobile-nav .wrapper .top-block .col .logo svg {
 		width: clamp(150px, 35vw, 250px);
@@ -651,7 +660,7 @@ h2 {
 	}
 	.mobile-nav .wrapper .top-block .mobile-box .btn-close {
 		display: none;
-		padding: 20px 20px 15px;
+		padding: 15px 15px 10px;
 		border-radius: 50%;
 		background: #262626;
 		-webkit-backdrop-filter: blur(10px);
