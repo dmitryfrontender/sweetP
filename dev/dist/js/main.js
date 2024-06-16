@@ -3,6 +3,7 @@ $(document).ready(function () {
 	mobileButtonsHandle();
 	setNavItem();
 	showList();
+	swiperInit();
 });
 
 $(window).on('load', function () {
@@ -56,7 +57,7 @@ function setNavItem () {
 }
 
 function showList() {
-	
+
 	$('.input').on('click', function () {
 		$('.search-list').addClass('search-list-active');
 	});
@@ -67,4 +68,23 @@ function showList() {
 		}
 
 	})
+}
+
+function swiperInit() {
+	if ($('.swiper').length) {
+		const swiper = new Swiper('.swiper', {
+			// Optional parameters
+			// direction: 'horizontal',
+			slidesPerView: 1.2,
+
+			spaceBetween: 30,
+			breakpoints: {
+				// when window width is >= 320px
+				1024: {
+				  slidesPerView: 3
+				}
+			}
+
+		});
+	}
 }
