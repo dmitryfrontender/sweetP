@@ -1,24 +1,12 @@
 @font-face {
-	font-family: "jost-regular";
-	src: url("../fonts/jost-regular.otf") format("otf"), url("../fonts/jost-regular.woff2") format("woff2"), url("../fonts/jost-regular.woff") format("woff"), url("../fonts/jost-regular.svg#jostregular") format("svg");
+	font-family: "sf_pro_displaymedium";
+	src: url("../fonts/sf-pro-display-medium.woff2") format("woff2"), url("../fonts/sf-pro-display-medium.woff") format("woff"), url("../fonts/sf-pro-display-medium.svg#sf_pro_displaymedium") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: "jost-medium";
-	src: url("../fonts/jost-medium.otf") format("otf"), url("../fonts/jost-medium.woff2") format("woff2"), url("../fonts/jost-medium.woff") format("woff"), url("../fonts/jost-medium-webfont.svg#jostmedium") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "sf-medium";
-	src: url("../fonts/sf-medium.otf") format("otf"), url("../fonts/sf-medium.woff2") format("woff2"), url("../fonts/sf-medium.woff") format("woff"), url("../fonts/sf-medium.svg#sf_pro_displaymedium") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "sf-regular";
-	src: url("../fonts/sf-regular.otf") format("otf"), url("../fonts/sf-regular.woff2") format("woff2"), url("../fonts/sf-regular.woff") format("woff"), url("../fonts/sf-regular.svg#sf_pro_displayregular") format("svg");
+	font-family: "sf_pro_displayregular";
+	src: url("../fonts/sf-pro-display-regular.woff2") format("woff2"), url("../fonts/sf-pro-display-regular.woff") format("woff"), url("../fonts/sf-pro-display-regular.svg#sf_pro_displayregular") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -73,7 +61,7 @@ html {
 }
 
 body {
-	font: 12px/1.2 sf-regular, Helvetica, sans-serif;
+	font: 12px/1.2 sf_pro_displayregular, Helvetica, sans-serif;
 	height: 100%;
 	min-width: 320px;
 	position: relative;
@@ -338,7 +326,7 @@ input.placeholder, textarea.placeholder {
 
 h2 {
 	color: #FFF;
-	font-family: jost-medium, sans-serif;
+	font-family: "Jost", sans-serif;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
@@ -493,7 +481,7 @@ h2 {
 }
 .header .second .nav-text {
 	color: #FFF;
-	font-family: Jost-medium;
+	font-family: "Jost", sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
@@ -644,7 +632,7 @@ h2 {
 	}
 	.mobile-nav .wrapper nav ul li a span {
 		color: #FFF;
-		font-family: jost-medium, sans-serif;
+		font-family: "Jost", sans-serif;
 		font-size: clamp(18px, 2vw, 22px);
 		font-style: normal;
 		font-weight: 500;
@@ -784,6 +772,54 @@ h2 {
 	max-width: -webkit-fill-available;
 }
 
+.thumb-category .box-img {
+	border-radius: 0px 0px 18px 18px;
+}
+.thumb-category .box-img .bg {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+	border-radius: 0px 0px 18px 18px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.thumb-category .box-img .title {
+	position: absolute;
+	color: #FFF;
+	text-align: right;
+	font-family: "Jost", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+	top: 10px;
+	z-index: 1;
+	right: 10px;
+}
+
+.top-category {
+	overflow: auto;
+	padding: 0 5vw;
+}
+.top-category .thumb-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	width: -moz-fit-content;
+	width: fit-content;
+	gap: 30px;
+}
+.top-category .thumb-wrapper .thumb {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
 .thumb-models .box-img {
 	border: 1px solid transparent;
 	border-radius: 14px;
@@ -864,6 +900,7 @@ h2 {
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 0.3px;
+	text-align: left;
 }
 .description .info {
 	display: flex;
@@ -912,7 +949,7 @@ h2 {
 	border-radius: 50px;
 	color: #FFF;
 	text-align: center;
-	font-family: sf-medium, sans-serif;
+	font-family: sf_pro_displaymedium, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -931,7 +968,7 @@ footer .footer-top .footer-wrap {
 }
 footer .footer-top .footer-wrap .item h1 {
 	color: #FFC01D;
-	font-family: jost-medium;
+	font-family: "Jost", sans-serif;
 	font-size: 100px;
 	font-style: normal;
 	font-weight: 500;
@@ -939,7 +976,7 @@ footer .footer-top .footer-wrap .item h1 {
 }
 footer .footer-top .footer-wrap .item h3 {
 	color: #FFF;
-	font-family: jost-medium;
+	font-family: "Jost", sans-serif;
 	font-size: 60px;
 	font-style: normal;
 	font-weight: 500;
@@ -954,7 +991,7 @@ footer .footer-top .footer-wrap .item .description {
 }
 footer .footer-top .footer-wrap .item .description p {
 	color: #6F6858;
-	font-family: sf-medium;
+	font-family: sf_pro_displaymedium, sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -978,7 +1015,7 @@ footer .footer-bottom .footer-wrap {
 footer .footer-bottom .footer-wrap p {
 	color: #6F6858;
 	text-align: center;
-	font-family: sf-regular;
+	font-family: sf_pro_displayregular;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -995,7 +1032,7 @@ footer .footer-bottom .footer-wrap .navbar a {
 	align-items: center;
 	gap: 10px;
 	color: white;
-	font-family: jost-medium, sans-serif;
+	font-family: "Jost", sans-serif;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
@@ -1123,7 +1160,7 @@ footer .footer-bottom .footer-wrap .footer-light {
 }
 .video-wrapper .headline {
 	color: #FFF;
-	font-family: jost-regular, sans-serif;
+	font-family: "Jost", sans-serif;
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 400;
@@ -1169,7 +1206,7 @@ footer .footer-bottom .footer-wrap .footer-light {
 .video-wrapper .sharing-container .button {
 	color: #FFF;
 	text-align: center;
-	font-family: sf-medium, sans-serif;
+	font-family: sf_pro_displaymedium, sans-serif;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
@@ -1223,7 +1260,8 @@ footer .footer-bottom .footer-wrap .footer-light {
 }
 .video-wrapper .info-name {
 	color: #FFF;
-	font-family: jost-regular, sans-serif;
+	font-family: "Jost", sans-serif;
+	font-weight: 400;
 	font-size: 20px;
 	font-style: normal;
 	line-height: normal;
