@@ -129,23 +129,16 @@ input, textarea {
 		display: inline-block;
 		color: #FFF;
 		text-align: center;
-		// leading-trim: both;
-		// text-edge: cap;
 		font-family: Jost-regular;
 		font-size: clamp(35px, 5vw, 100px);
-		// font-size: 100px;
 		font-style: normal;
 		font-weight: 300;
 		line-height: 70px; /* 70% */
 	}
 	.accent{
 		color: #FFC01D;
-		// leading-trim: both;
-		// text-edge: cap;
 		font-family: Jost-medium;
-		// font-size: 100px;
 		font-size: clamp(35px, 5vw, 100px);
-
 		font-style: normal;
 		font-weight: 600;
 		line-height: 70px;
@@ -229,6 +222,7 @@ input, textarea {
 				li{
 					display: flex;
 					justify-content: space-between;
+					align-items: center;
 					padding: 0 12px;
 
 					cursor: pointer;
@@ -242,9 +236,17 @@ input, textarea {
 							font-weight: 400;
 							line-height: 150%;
 							display: inline-block;
+							margin: 0;
 						}
 						.accent-list{
 							color: #FFF;
+						}
+					}
+					.arrow{
+						svg{
+							width: 10px;
+							height: 10px;
+							fill: rgba(255, 255, 255, 0.50);
 						}
 					}
 					
@@ -252,6 +254,11 @@ input, textarea {
 				li:hover{
 					border-radius: 50px;
 					background: #595959;
+					.arrow{
+						svg{
+							fill: #FFC01D;
+						}
+					}
 
 				}
 			}
