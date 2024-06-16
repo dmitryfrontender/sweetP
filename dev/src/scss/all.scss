@@ -316,7 +316,7 @@ input, textarea {
 }
 .category-title{
 	text-align: left;
-	margin: 5vw auto 6vw;
+	margin: 60px auto 80px;
 	.small-text{
 		display: inline-block;
 		color: #FFF;
@@ -348,6 +348,12 @@ input, textarea {
 		font-weight: 400;
 		line-height: normal;
 	}
+}
+@media screen and (max-width: 1024px) {
+	.category-title{
+		margin: 5vw auto 6vw;
+	}
+	
 }
 
 .container {

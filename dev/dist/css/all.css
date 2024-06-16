@@ -320,7 +320,7 @@ input.placeholder, textarea.placeholder {
 
 .category-title {
 	text-align: left;
-	margin: 5vw auto 6vw;
+	margin: 60px auto 80px;
 }
 .category-title .small-text {
 	display: inline-block;
@@ -351,6 +351,11 @@ input.placeholder, textarea.placeholder {
 	line-height: normal;
 }
 
+@media screen and (max-width: 1024px) {
+	.category-title {
+		margin: 5vw auto 6vw;
+	}
+}
 .container {
 	max-width: 1460px;
 	margin: 0 auto;
