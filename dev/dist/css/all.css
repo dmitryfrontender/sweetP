@@ -245,6 +245,7 @@ input.placeholder, textarea.placeholder {
 .index-title .input-block .search-list ul li {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 0 12px;
 	cursor: pointer;
 }
@@ -259,13 +260,22 @@ input.placeholder, textarea.placeholder {
 	font-weight: 400;
 	line-height: 150%;
 	display: inline-block;
+	margin: 0;
 }
 .index-title .input-block .search-list ul li .message .accent-list {
 	color: #FFF;
 }
+.index-title .input-block .search-list ul li .arrow svg {
+	width: 10px;
+	height: 10px;
+	fill: rgba(255, 255, 255, 0.5);
+}
 .index-title .input-block .search-list ul li:hover {
 	border-radius: 50px;
 	background: #595959;
+}
+.index-title .input-block .search-list ul li:hover .arrow svg {
+	fill: #FFC01D;
 }
 .index-title .input-block .search-list-active {
 	display: block;
@@ -1104,6 +1114,9 @@ footer .footer-bottom .footer-wrap .footer-light {
 }
 
 @media screen and (max-width: 1024px) {
+	footer .footer-top {
+		margin-top: 35vw;
+	}
 	footer .footer-top .footer-wrap {
 		position: relative;
 		flex-direction: column-reverse;
@@ -1120,7 +1133,7 @@ footer .footer-bottom .footer-wrap .footer-light {
 	}
 	footer .footer-top .footer-wrap .image-item {
 		position: absolute;
-		bottom: 75%;
+		top: -25vw;
 		z-index: -1;
 	}
 	footer .footer-top .footer-wrap .image-item img {
@@ -1138,7 +1151,7 @@ footer .footer-bottom .footer-wrap .footer-light {
 		font-size: clamp(50px, 15vw, 100px);
 	}
 	footer .footer-top .footer-wrap .item h3 {
-		font-size: clamp(30px, 10vw, 60px);
+		font-size: clamp(27px, 8vw, 60px);
 	}
 }
 .player-wrap {
