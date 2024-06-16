@@ -314,6 +314,41 @@ input, textarea {
 		
 	}
 }
+.category-title{
+	text-align: left;
+	margin: 5vw auto 6vw;
+	.small-text{
+		display: inline-block;
+		color: #FFF;
+		font-family: "Jost", sans-serif;
+		font-size: clamp(18px, 5vw, 33px);
+		// font-size: 33px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	.accent{
+		display: inline-block;
+		color: #FFC01D;
+		font-family: "Jost", sans-serif;
+		font-size: clamp(32px, 5vw, 72px);
+		// font-size: 72px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	.description{
+		padding: 0;
+		display: block;
+		color: #969696;
+		font-family: "Jost", sans-serif;
+		font-size: clamp(18px, 5vw, 26px);
+		// font-size: 26px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+}
 
 .container {
     max-width: 1460px;

@@ -64,11 +64,5 @@ function showList() {
 			$('.search-list').removeClass('search-list-active');
 		}
 
-
-
-		// if ($(e.target).closest('.search-list')) {
-		// 	console.log('click-outside');
-		// 	// $('.search-list').removeClass('search-list-active');
-		// }
 	})
 }
