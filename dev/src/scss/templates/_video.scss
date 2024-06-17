@@ -36,6 +36,8 @@
 .kt-player {
     position: absolute;
     inset: 0;
+    min-height: 100%;
+    width: 100%;
 }
 
 .video-wrapper {
@@ -153,7 +155,7 @@
             letter-spacing: 0.28px;
 
             @media screen and (max-width: 1023px) {
-                padding: 5px 20px 5px 8px;
+                padding: 5px 0;
             }
 
             svg {
@@ -252,6 +254,38 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.show-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    &-btn {
+        height: 45px;
+        padding: 5px 20px 5px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background: #262626;
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-family: 'sf_pro_displaymedium', sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        .svg-icon {
+            width: 20px;
+            height: 20px;
         }
     }
 }

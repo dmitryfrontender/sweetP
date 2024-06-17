@@ -1,11 +1,11 @@
 // settings main
 $body_color:#000;
-$body_bg: linear-gradient(0deg, #151515 0%, #151515 100%), #FFF;
+$body_bg: url("../images/main-bg.png");
 $placeholder_color:#999;
 $selection_bg:#2600ff;
 $selection_color:#fff;
 $site_font_size:12px;
 $site_line_height:1.2;
-$default_font: sf_pro_displayregular, Helvetica, sans-serif;
+$default_font: 'sf_pro_displayregular', sans-serif;
 $link_color:#2600ff;
 $link_hover_color:#2600ff;
