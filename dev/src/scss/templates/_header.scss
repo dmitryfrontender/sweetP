@@ -11,6 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 15px;
     }
     .col{
         .navbar{
@@ -92,7 +93,7 @@
             padding: 16px 3px 16px 20px;
 
             background: none;
-
+            color: #FFF;
             border: none;
 
         }
@@ -139,13 +140,13 @@
             display: none;
         }
     }
-   
+
 }
 
 
 @media screen and (max-width: 1024px) {
     .header{
-        margin: 0 5vw;
+        // margin: 0 5vw;
         .second, .third{
             display: none;
 

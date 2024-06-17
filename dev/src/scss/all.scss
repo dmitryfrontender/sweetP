@@ -20,6 +20,7 @@ html{
 	min-width:320px;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	background: linear-gradient(0deg, #151515 0%, #151515 100%), #FFF;
 }
 body{
 	font: #{$site_font_size}/#{$site_line_height} $default_font;
@@ -28,8 +29,10 @@ body{
 	min-width:320px;
 	position:relative;
 	color:$body_color;
-	background:$body_bg;
-	background: #000;
+	background-image: $body_bg;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 a{
 	color:$link_color;
@@ -165,7 +168,7 @@ input, textarea {
 			margin: 0 auto;
 			input{
 				color: #FFF;
-				font-family: "SF Pro Display";
+				font-family: 'sf_pro_displayregular', sans-serif;
 				font-size: 16px;
 				font-style: normal;
 				font-weight: 400;
@@ -198,7 +201,7 @@ input, textarea {
 					height: 20px;
 				}
 			}
-			
+
 		}
 		.search-list{
 			display: none;
@@ -230,7 +233,7 @@ input, textarea {
 						text-align: left;
 						span{
 							color: rgba(255, 255, 255, 0.50);
-							font-family: "SF Pro Display";
+							font-family: 'sf_pro_displayregular', sans-serif;
 							font-size: clamp(12px, 2vw, 16px);
 							font-style: normal;
 							font-weight: 400;
@@ -249,7 +252,7 @@ input, textarea {
 							fill: rgba(255, 255, 255, 0.50);
 						}
 					}
-					
+
 				}
 				li:hover{
 					border-radius: 50px;
@@ -272,7 +275,7 @@ input, textarea {
 				width: clamp(310px, 80vw, 688px);
 			}
 		}
-		
+
 	}
 }
 .title-block{
@@ -318,7 +321,7 @@ input, textarea {
 			color: #969696;
 		}
 
-		
+
 	}
 }
 .category-title{
@@ -360,13 +363,17 @@ input, textarea {
 	.category-title{
 		margin: 5vw auto 6vw;
 	}
-	
+
 }
 
 .container {
     max-width: 1460px;
     margin: 0 auto;
     padding: 0 10px;
+
+	@media screen and (max-width: 1024px) {
+		padding: 0 20px;
+	}
 }
 
 h2 {
