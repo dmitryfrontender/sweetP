@@ -4,6 +4,7 @@ $(document).ready(function () {
 	setNavItem();
 	showList();
 	swiperInit();
+	mobileSearch();
 });
 
 $(window).on('load', function () {
@@ -21,7 +22,7 @@ function mobileButtonsHandle () {
 			$('.mobile-nav').css('display', 'block');
 			$('.btn-search').css('display', 'none');
 			$('.btn-burger').css('display', 'none');
-			$('.btn-close').css('display', 'block');
+			$('.btn-close').css('display', 'flex');
 			$('body').css('overflow', 'hidden');
 		});
 	}
@@ -73,13 +74,9 @@ function showList() {
 function swiperInit() {
 	if ($('.swiper').length) {
 		const swiper = new Swiper('.swiper', {
-			// Optional parameters
-			// direction: 'horizontal',
 			slidesPerView: 1.2,
-
 			spaceBetween: 30,
 			breakpoints: {
-				// when window width is >= 320px
 				1024: {
 				  slidesPerView: 3
 				}
@@ -87,4 +84,14 @@ function swiperInit() {
 
 		});
 	}
+}
+
+function mobileSearch() {
+	$('.btn-search').on('click', function () {
+		if (!$('.js-search-box').hasClass('active')) {
+			$('.js-search-box').addClass('active');
+		} else {
+			$('.js-search-box').removeClass('active');
+		}
+	})
 }

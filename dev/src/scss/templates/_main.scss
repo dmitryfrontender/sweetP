@@ -38,14 +38,27 @@
         .sort-box {
             margin-left: 0;
             width: 100%;
+
+            &-studios {
+                .sort-box-wrapper {
+                    width: 100%;
+
+                    .form-group {
+                        label {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
         }
 
         .sort-box-wrapper {
             width: 100%;
 
             .form-group {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                label {
+                    width: 33.3%;
+                }
             }
         }
     }
@@ -137,6 +150,14 @@
         backdrop-filter: blur(10px);
         img{
             padding: 45px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            .box-img {
+                border-color: #FCAA46;
+            }
         }
     }
 }
