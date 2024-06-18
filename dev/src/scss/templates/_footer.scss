@@ -15,21 +15,23 @@ footer{
             align-items: center;
             gap: 20px;
             .item{
-                h1{
-                    color: #FFC01D;
-                    font-family: "Jost", sans-serif;
-                    font-size: 100px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 70px;
-                }
-                h3{
+                h2{
                     color: #FFF;
                     font-family: "Jost", sans-serif;
                     font-size: 60px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 70px;
+
+                    .accent {
+                        color: #FFC01D;
+                        font-family: "Jost", sans-serif;
+                        font-size: 100px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 70px;
+                        display: block;
+                    }
                 }
                 .description{
                     display: flex;

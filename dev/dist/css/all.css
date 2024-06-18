@@ -1309,21 +1309,22 @@ footer .footer-top .footer-wrap {
 	align-items: center;
 	gap: 20px;
 }
-footer .footer-top .footer-wrap .item h1 {
-	color: #FFC01D;
-	font-family: "Jost", sans-serif;
-	font-size: 100px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 70px;
-}
-footer .footer-top .footer-wrap .item h3 {
+footer .footer-top .footer-wrap .item h2 {
 	color: #FFF;
 	font-family: "Jost", sans-serif;
 	font-size: 60px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 70px;
+}
+footer .footer-top .footer-wrap .item h2 .accent {
+	color: #FFC01D;
+	font-family: "Jost", sans-serif;
+	font-size: 100px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 70px;
+	display: block;
 }
 footer .footer-top .footer-wrap .item .description {
 	display: flex;
