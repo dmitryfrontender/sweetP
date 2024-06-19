@@ -191,6 +191,14 @@
             right: 10px;
         }
     }
+
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            .box-img {
+                border-color: #FCAA46;
+            }
+        }
+    }
 }
 
 .top-category{
@@ -200,6 +208,14 @@
         width: 100%;
         border-radius: 18px;
         border: 5px solid #e29b4e;
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                .top-category-description {
+                    opacity: .5;
+                }
+            }
+        }
     }
 
     .thumb-link,
@@ -224,6 +240,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 18px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%) 50% / cover no-repeat;
     }
 }

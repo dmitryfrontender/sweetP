@@ -15,6 +15,8 @@ footer{
             align-items: center;
             gap: 20px;
             .item{
+                width: 100%;
+
                 h2{
                     color: #FFF;
                     font-family: "Jost", sans-serif;
@@ -146,7 +148,7 @@ footer{
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 
     footer{
         .footer-top{
@@ -154,6 +156,12 @@ footer{
             .footer-wrap{
                 position: relative;
                 flex-direction: column-reverse;
+
+                .item {
+                    h2 {
+                        font-size: 50px;
+                    }
+                }
 
                 .image-item{
                     position: absolute;
@@ -188,9 +196,14 @@ footer{
                     .item{
                         line-height: inherit;
 
-                        h1{
-                            font-size: 50px;
+                        h2{
+                            font-size: 30px;
                             line-height: 50px;
+
+                            .accent{
+                                font-size: 50px;
+                                line-height: 50px;
+                            }
                         }
                         h3{
                             font-size: 30px;

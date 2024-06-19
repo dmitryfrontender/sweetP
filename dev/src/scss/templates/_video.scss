@@ -47,7 +47,7 @@
         justify-content: space-between;
         margin-bottom: 12px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             flex-wrap: wrap;
             gap: 12px;
         }
@@ -75,7 +75,7 @@
             white-space: nowrap;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             font-size: 20px;
             line-height: 24px;
             width: 100%;
@@ -92,7 +92,7 @@
     .sharing-container {
         flex-shrink: 0;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             width: 100%;
         }
 
@@ -101,7 +101,7 @@
             align-items: center;
             gap: 8px;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1023px) {
                 li {
                     flex-basis: 50%;
                 }
@@ -111,7 +111,7 @@
         .button {
             color: #FFF;
             text-align: center;
-            font-family: 'sf_pro_displaymedium';
+            font-family: sf_pro_displaymedium, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 500;
@@ -277,7 +277,7 @@
         align-items: center;
         color: #FFF;
         text-align: center;
-        font-family: 'sf_pro_displaymedium', sans-serif;
+        font-family: sf_pro_displaymedium, sans-serif;
         font-size: 15px;
         font-style: normal;
         font-weight: 500;

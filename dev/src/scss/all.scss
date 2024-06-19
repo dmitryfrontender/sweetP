@@ -126,7 +126,11 @@ textarea {
 	width: 100%;
 	height: 100%;
 	table-layout: fixed;
-	overflow: hidden;
+
+
+	@media screen and (max-width: 1023px) {
+		overflow: hidden;
+	}
 }
 .index-title {
 	text-align: center;
@@ -241,6 +245,15 @@ textarea {
 					width: 20px;
 					height: 20px;
 				}
+
+				@media screen and (min-width: 1024px) {
+					&:hover {
+						background: linear-gradient(136deg, rgba(177, 177, 177, 0.32) 5.24%, rgba(54, 53, 103, 0.2) 51.01%), #f5c957;
+						svg {
+							fill: #f5c957;
+						}
+					}
+				}
 			}
 		}
 		.search-list {
@@ -311,7 +324,7 @@ textarea {
 		.search-list-active {
 			display: block;
 		}
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 1023px) {
 			.search-list {
 				width: clamp(310px, 80vw, 688px);
 			}
@@ -323,17 +336,8 @@ textarea {
 		width: 100%;
 		max-width: 480px;
 
-		// text-align: left;
-
 		h1 {
-			// text-align: left;
 			margin-bottom: 10px;
-		}
-
-		.input-block {
-			.input {
-				// margin: 0;
-			}
 		}
 
 		&:before {
@@ -387,7 +391,7 @@ textarea {
 	.mobile-description {
 		display: none;
 	}
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		.description {
 			display: none;
 		}
@@ -597,7 +601,7 @@ textarea {
 	margin: 0 auto;
 	padding: 0 10px;
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		padding: 0 20px;
 	}
 
