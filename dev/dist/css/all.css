@@ -826,6 +826,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	gap: 2vw;
+	padding: 0 5px;
 }
 .header .col .navbar a {
 	display: flex;
