@@ -1428,7 +1428,7 @@ h2 {
 }
 .tags-alphabet .item .link-alphabet {
 	text-align: center;
-	font-family: Jost;
+	font-family: "Jost", sans-serif;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
