@@ -108,6 +108,9 @@
 					d="M0.245899 0.241064C-0.0521603 0.533264 -0.079257 0.990508 0.16461 1.31272L0.245899 1.40503L6.97342 8L0.245899 14.595C-0.0521603 14.8872 -0.079257 15.3444 0.16461 15.6666L0.245899 15.7589C0.543959 16.0511 1.01037 16.0777 1.33904 15.8386L1.43321 15.7589L8.7541 8.58198C9.05216 8.28978 9.07926 7.83254 8.83539 7.51033L8.7541 7.41802L1.43321 0.241064C1.10534 -0.0803548 0.573765 -0.0803548 0.245899 0.241064Z"
 				></path>
 			</symbol>
+		  <symbol id="icon-angle-down" viewBox="0 0 14">
+		    <path d="M13 7.5L7 1.5L1 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		  </symbol>
 			<symbol id="icon-burger" viewBox="0 0 26 17">
 				<!-- stroke color -->
 				<path d="M1.75 1.00125H24.25M1.75 8.50125H24.25M1.75 16.0013H24.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ></path>
@@ -286,7 +289,7 @@
 		</svg>
 
 		<div class="wrapper">
-			<header class="header main-header">
+			<header class="header ">
 				<div class="container">
 					<div class="header-wrapper">
 						<div class="col">
@@ -369,7 +372,7 @@
 								</a>
 							</div>
 							<div class="col mobile-box">
-								<button type="submit" class="btn-close main-header">
+								<button type="submit" class="btn-close ">
 									<svg class="svg-icon"><use xlink:href="#icon-close"></use></svg>
 								</button>
 							</div>
@@ -430,109 +433,19 @@
 			<div class="main">
 <section class="section">
 	<div class="container">
-        <div class="index-title">
-            <h1>
-                Откройте <span class="accent">мир</span> <span>непревзойденного удовольствия</span>
-            </h1>
-
-            <div class="input-block">
-                <div class="input">
-                    <input type="text" placeholder="Найти порно">
-                    <button>
-                        <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-                    </button>
-                </div>
-                <div class="search-list">
-                    <ul>
-                        <li>
-                            <div class="message">
-                                <span class="accent-list">
-                                    Большие сиськи
-                                </span>
-                                <span>
-                                    в масле
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Продемонстрировала свои
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Брат увидел
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Обожает
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 		<div class="heading">
 			<h2 class="title-name">НОВЫЕ ВИДЕО</h2>
 			<div class="sort-box">
-				<div class="sort-box-wrapper">
-                    <form action="#" class="sort-form">
-                        <div class="form-group">
-                            <input type="radio" name="filter" value="new" id="sort-new" checked="checked">
-                            <label for="sort-new">
-                                Новые
-                            </label>
-
-                            <input type="radio" name="filter" value="popular" id="sort-popular">
-                            <label for="sort-popular">
-                                Популярные
-                            </label>
-
-                            <input type="radio" name="filter" value="best" id="sort-best">
-                            <label for="sort-best">
-                                Лучшие
-                            </label>
-                        </div>
-                    </form>
-                </div>
-			</div>
+        <div class="sort-box-wrapper">
+          <div class="sort-form" id="list_videos_most_recent_videos_sort_list">
+            <div class="form-group">
+              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
 		<div class="thumbs">

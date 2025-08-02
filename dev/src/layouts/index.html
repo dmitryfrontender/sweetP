@@ -1,110 +1,20 @@
-{{> header pageTitle="Index" showSearch="main-header"}}
+{{> header pageTitle="Index"}}
 
 <section class="section">
 	<div class="container">
-        <div class="index-title">
-            <h1>
-                Откройте <span class="accent">мир</span> <span>непревзойденного удовольствия</span>
-            </h1>
-
-            <div class="input-block">
-                <div class="input">
-                    <input type="text" placeholder="Найти порно">
-                    <button>
-                        <svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-                    </button>
-                </div>
-                <div class="search-list">
-                    <ul>
-                        <li>
-                            <div class="message">
-                                <span class="accent-list">
-                                    Большие сиськи
-                                </span>
-                                <span>
-                                    в масле
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Продемонстрировала свои
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Брат увидел
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <div class="message">
-                                <span>
-                                    Обожает
-                                </span>
-                                <span class="accent-list">
-                                    большие сиськи
-                                </span>
-                            </div>
-                            <div class="arrow">
-                                <svg class="svg-icon"><use xlink:href="#icon-arrow-right"></use></svg>
-
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 		<div class="heading">
 			<h2 class="title-name">НОВЫЕ ВИДЕО</h2>
 			<div class="sort-box">
-				<div class="sort-box-wrapper">
-                    <form action="#" class="sort-form">
-                        <div class="form-group">
-                            <input type="radio" name="filter" value="new" id="sort-new" checked="checked">
-                            <label for="sort-new">
-                                Новые
-                            </label>
-
-                            <input type="radio" name="filter" value="popular" id="sort-popular">
-                            <label for="sort-popular">
-                                Популярные
-                            </label>
-
-                            <input type="radio" name="filter" value="best" id="sort-best">
-                            <label for="sort-best">
-                                Лучшие
-                            </label>
-                        </div>
-                    </form>
-                </div>
-			</div>
+        <div class="sort-box-wrapper">
+          <div class="sort-form" id="list_videos_most_recent_videos_sort_list">
+            <div class="form-group">
+              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
 		<div class="thumbs">
