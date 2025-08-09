@@ -1,0 +1,87 @@
+<!-- Registration Modal -->
+<div class="modal-overlay" id="registrationModal">
+	<!-- Modal Container -->
+	<div class="modal-container">
+		<!-- Left Side - Promotional Content -->
+		<div class="modal-promo">
+			<img src="../images/thumb-img1.jpg" alt="Background" class="promo-background-image">
+			<div class="promo-overlay"></div>
+			<div class="promo-content">
+				<div class="logo-container">
+					<img src="../images/popup-logo.svg" alt="Sweet Porno Logo" class="popup-logo">
+				</div>
+				<div class="promo-text">
+					<h2><span class="premium-text">Премиум</span></h2>
+					<p>контент для взрослых!</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right Side - Registration Form -->
+		<div class="modal-form">
+			<button class="modal-close" onclick="closeRegistrationModal()">
+				<svg class="close-icon">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+			</button>
+
+			<div class="form-content">
+				<h2 class="form-title">Регистрация</h2>
+				<form class="registration-form" id="registrationForm">
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-user"></use>
+						</svg>
+						<input type="text" class="form-input" placeholder="Ваше имя" required>
+					</div>
+
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-email"></use>
+						</svg>
+						<input type="email" class="form-input" placeholder="Электронная почта" required>
+					</div>
+
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-password"></use>
+						</svg>
+						<input type="password" class="form-input" placeholder="Пароль" required>
+						<svg class="input-icon input-icon-right password-toggle">
+							<use xlink:href="#icon-eye"></use>
+						</svg>
+					</div>
+
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-password"></use>
+						</svg>
+						<input type="password" class="form-input" placeholder="Повторите пароль" required>
+						<svg class="input-icon input-icon-right password-toggle">
+							<use xlink:href="#icon-eye"></use>
+						</svg>
+					</div>
+
+					<div class="form-checkbox">
+						<input type="checkbox" id="agreeTerms" required>
+						<label for="agreeTerms">
+							Продолжая, вы соглашаетесь с нашими <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a>
+						</label>
+					</div>
+
+					<button type="submit" class="form-submit">
+						Зарегистрироваться
+						<svg class="submit-icon">
+							<use xlink:href="#icon-arrow-right"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			
+			<div class="copyright">
+				© 2019-2023 sweetporno.com<br>
+				Все права защищены
+			</div>
+		</div>
+	</div>
+</div>

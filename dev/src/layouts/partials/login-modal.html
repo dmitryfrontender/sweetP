@@ -1,0 +1,87 @@
+<!-- Login Modal -->
+<div class="modal-overlay" id="loginModal">
+	<!-- Modal Container -->
+	<div class="modal-container">
+		<!-- Left Side - Promotional Content -->
+		<div class="modal-promo">
+			<img src="../images/thumb-img1.jpg" alt="Background" class="promo-background-image">
+			<div class="promo-overlay"></div>
+			<div class="promo-content">
+				<div class="logo-container">
+					<img src="../images/popup-logo.svg" alt="Sweet Porno Logo" class="popup-logo">
+				</div>
+				<div class="promo-text">
+					<h2><span class="premium-text">премиум</span></h2>
+					<p>контент для взрослых!</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right Side - Login Form -->
+		<div class="modal-form">
+			<button class="modal-close" onclick="closeLoginModal()">
+				<svg class="close-icon">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+			</button>
+
+			<div class="form-content">
+				<h2 class="form-title">Вход</h2>
+				<form class="login-form-content" id="loginForm">
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-user"></use>
+						</svg>
+						<input type="email" class="form-input" placeholder="Логин" required>
+					</div>
+
+					<div class="form-group">
+						<svg class="input-icon input-icon-left">
+							<use xlink:href="#icon-password"></use>
+						</svg>
+						<input type="password" class="form-input" placeholder="Пароль" required>
+						<svg class="input-icon input-icon-right password-toggle">
+							<use xlink:href="#icon-eye"></use>
+						</svg>
+					</div>
+
+					<div class="form-options">
+						<div class="form-checkbox">
+							<input type="checkbox" id="rememberMe">
+							<label for="rememberMe">Запомнить меня</label>
+						</div>
+						<a href="#" class="forgot-password">Забыли пароль?</a>
+					</div>
+
+					<div class="login-terms">
+						<p>Продолжая, вы соглашаетесь с нашими <a href="#">Условиями использования</a></p>
+						<p>и <a href="#">Политикой конфиденциальности</a></p>
+					</div>
+
+					<button type="submit" class="form-submit login-submit">
+						Войти
+						<svg class="submit-icon">
+							<use xlink:href="#icon-arrow-right"></use>
+						</svg>
+					</button>
+
+					<div class="login-divider">
+						<span>нет аккаунта?</span>
+					</div>
+
+					<button type="button" class="register-link-button" onclick="switchToRegistration()">
+						Зарегистрироваться
+						<svg class="register-icon">
+							<use xlink:href="#icon-user-add"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			
+			<div class="copyright">
+				© 2019-2023 sweetporno.com<br>
+				Все права защищены
+			</div>
+		</div>
+	</div>
+</div>
