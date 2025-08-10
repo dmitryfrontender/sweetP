@@ -56,8 +56,8 @@ function setNavItem () {
 				$(this).removeClass('active-nav');
 			}
 
-			});
-
+    });
+  });
 }
 
 // Subscribe button functionality
@@ -117,8 +117,6 @@ function initSubscribeButtons() {
 document.addEventListener('DOMContentLoaded', function() {
 	initSubscribeButtons();
 });
-
-}
 
 function showList() {
 
@@ -470,5 +468,143 @@ function signInModal() {
 		e.preventDefault();
 		// Add your registration logic here
 		console.log('Registration form submitted');
+	});
+	
+	// Password toggle functionality for modals
+	$('.password-toggle').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		
+		const $input = $(this).siblings('.form-input');
+		const $icon = $(this).find('use');
+		const currentHref = $icon.attr('xlink:href');
+		
+		if ($input.attr('type') === 'password') {
+			// Show password
+			$input.attr('type', 'text');
+			$icon.attr('xlink:href', '#icon-hide');
+		} else {
+			// Hide password
+			$input.attr('type', 'password');
+			$icon.attr('xlink:href', '#icon-show');
+		}
+	});
+
+	// Password toggle functionality for profile page
+	$('.input-field .password-toggle').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		
+		const $input = $(this).siblings('input');
+		const $icon = $(this).find('use');
+		
+		if ($input.attr('type') === 'password') {
+			// Show password
+			$input.attr('type', 'text');
+			$icon.attr('xlink:href', '#icon-show');
+		} else {
+			// Hide password
+			$input.attr('type', 'password');
+			$icon.attr('xlink:href', '#icon-hide');
+		}
+	});
+
+	// Profile thumb delete button functionality
+	$('.profile-thumb .delete-btn').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		
+		// Add click animation
+		$(this).css('transform', 'scale(0.95)');
+		
+		setTimeout(() => {
+			$(this).css('transform', 'scale(1)');
+			
+			// Here you would typically make an API call to delete the item
+			// For now, we'll just remove the thumb from the DOM
+			const $thumb = $(this).closest('.profile-thumb');
+			$thumb.fadeOut(300, function() {
+				$(this).remove();
+			});
+			
+			console.log('Deleted favorite item');
+		}, 100);
+	});
+
+	// Subscriptions filter toggle functionality
+	$('.filter-btn').on('click', function(e) {
+		e.preventDefault();
+		
+		const filterType = $(this).data('filter');
+		
+		// Remove active class from all buttons
+		$('.filter-btn').removeClass('active');
+		
+		// Add active class to clicked button
+		$(this).addClass('active');
+		
+		// Here you would typically filter the content based on the selected type
+		// For now, we'll just log the selection
+		console.log(`Filter changed to: ${filterType}`);
+		
+		// Example: You could show/hide different content based on filter
+		if (filterType === 'models') {
+			// Show models content
+			$('.thumbs-subscriptions').show();
+			// Hide studios content if it exists
+			$('.thumbs-studios').hide();
+		} else if (filterType === 'studios') {
+			// Show studios content
+			$('.thumbs-studios').show();
+			// Hide models content
+			$('.thumbs-subscriptions').hide();
+		}
+	});
+
+	// FAQ Accordion functionality
+	$('.faq-item').on('click', function(e) {
+		e.preventDefault();
+		
+		const $faqItem = $(this);
+		const $answer = $faqItem.find('.faq-answer');
+		const $arrow = $faqItem.find('.faq-arrow');
+		
+		// Close all other FAQ items
+		$('.faq-item').not($faqItem).removeClass('active');
+		$('.faq-item').not($faqItem).find('.faq-answer').slideUp(300);
+		$('.faq-item').not($faqItem).find('.faq-arrow').css('transform', 'rotate(0deg)');
+		
+		// Toggle current FAQ item
+		if ($faqItem.hasClass('active')) {
+			$faqItem.removeClass('active');
+			$answer.slideUp(300);
+			$arrow.css('transform', 'rotate(0deg)');
+		} else {
+			$faqItem.addClass('active');
+			$answer.slideDown(300);
+			$arrow.css('transform', 'rotate(180deg)');
+		}
+	});
+
+	// Support form submission
+	$('.support-form').on('submit', function(e) {
+		e.preventDefault();
+		
+		// Get form data
+		const formData = {
+			name: $(this).find('input[type="text"]').val(),
+			email: $(this).find('input[type="email"]').val(),
+			topic: $(this).find('select').val(),
+			description: $(this).find('textarea').val()
+		};
+		
+		// Here you would typically send the data to your server
+		console.log('Support form submitted:', formData);
+		
+		// Show success message (you can customize this)
+		alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в течение 15 минут.');
+		
+		// Reset form
+		$(this)[0].reset();
 	});
 }

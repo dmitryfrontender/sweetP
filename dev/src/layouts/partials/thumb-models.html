@@ -1,56 +1,56 @@
 <div class="thumb-models">
-    <a href="#" class="thumb-link">
-        <span class="box-img">
-            <img src="{{image}}" class="thumb-img" alt="">
-            <div class="model-flag">
-                <img src="./images/flags/romania.png" alt="Romania" class="flag-icon">
-            </div>
-            <button class="subscribe-btn" data-subscribed="{{#if subscribed}}{{subscribed}}{{else}}false{{/if}}">
-                <!-- Default state: star icon -->
-                <div class="subscribe-default">
-                    <svg class="subscribe-icon">
-                        <use xlink:href="#icon-star"></use>
-                    </svg>
-                </div>
-                <!-- Hover state: full button -->
-                <div class="subscribe-hover">
-                    <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
-                    <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                    <svg class="subscribe-icon">
-                        <use xlink:href="#icon-star"></use>
-                    </svg>
-                </div>
-                <!-- Subscribed state: checkmark -->
-                <div class="subscribe-subscribed">
-                    <svg class="subscribe-icon">
-                        <use xlink:href="#icon-check"></use>
-                    </svg>
-                </div>
-            </button>
-        </span>
-        <span class="description">
-            <span class="info">
-                <span class="box">
-                    <span class="wrap">
-                        <span class="value">
-                            {{title}}
-                        </span>
-                    </span>
-                </span>
-                <span class="box">
-                    <span class="wrap">
-                        <svg class="svg-icon">
-                            <use xlink:href="#icon-camera"></use>
-                        </svg>
-                        <span class="value">{{#if subscribers}}{{subscribers}}{{else}}96{{/if}}</span>
-                    </span>
-                </span>
+  <a href="profile/model-profile.html" class="thumb-link">
+    <span class="box-img">
+      <img src="{{image}}" class="thumb-img" alt="">
+      <div class="model-flag">
+        <img src="./images/flags/romania.png" alt="Romania" class="flag-icon">
+      </div>
+      <button class="subscribe-btn" data-subscribed="{{#if subscribed}}{{subscribed}}{{else}}false{{/if}}">
+        <!-- Default state: star icon -->
+        <div class="subscribe-default">
+          <svg class="subscribe-icon">
+            <use xlink:href="#icon-star"></use>
+          </svg>
+        </div>
+        <!-- Hover state: full button -->
+        <div class="subscribe-hover">
+          <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
+          <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
+          <svg class="subscribe-icon">
+            <use xlink:href="#icon-star"></use>
+          </svg>
+        </div>
+        <!-- Subscribed state: checkmark -->
+        <div class="subscribe-subscribed">
+          <svg class="subscribe-icon">
+            <use xlink:href="#icon-check"></use>
+          </svg>
+        </div>
+      </button>
+    </span>
+    <span class="description">
+      <span class="info">
+        <span class="box">
+          <span class="wrap">
+            <span class="value">
+              {{title}}
             </span>
-            <div class="subscriber-info">
-                <span class="subscriber-count" data-base-count="{{#if baseSubscribers}}{{baseSubscribers}}{{else}}765{{/if}}">
-                    {{#if baseSubscribers}}{{baseSubscribers}}{{else}}765{{/if}} подписчиков
-                </span>
-            </div>
+          </span>
         </span>
-    </a>
+        <span class="box">
+          <span class="wrap">
+            <svg class="svg-icon">
+              <use xlink:href="#icon-camera"></use>
+            </svg>
+            <span class="value">{{#if subscribers}}{{subscribers}}{{else}}96{{/if}}</span>
+          </span>
+        </span>
+      </span>
+      <div class="subscriber-info">
+        <span class="subscriber-count" data-base-count="{{#if baseSubscribers}}{{baseSubscribers}}{{else}}765{{/if}}">
+          {{#if baseSubscribers}}{{baseSubscribers}}{{else}}765{{/if}} подписчиков
+        </span>
+      </div>
+    </span>
+  </a>
 </div>

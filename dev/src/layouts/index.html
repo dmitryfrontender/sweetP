@@ -1,35 +1,38 @@
 {{> header pageTitle="Index"}}
 
 <section class="section">
-	<div class="container">
-		<div class="heading">
-			<h2 class="title-name">НОВЫЕ ВИДЕО</h2>
-			<div class="sort-box">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title-name">НОВЫЕ ВИДЕО</h2>
+      <div class="sort-box">
         <div class="sort-box-wrapper">
           <div class="sort-form" id="list_videos_most_recent_videos_sort_list">
             <div class="form-group">
-              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
-              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
-              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list" data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
+              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
             </div>
           </div>
         </div>
       </div>
-		</div>
+    </div>
 
-		<div class="thumbs">
-            {{#repeat 10}}
-                <div class="col">
-                    {{> thumb image="./images/thumb-img2.jpg" title="Жена друга хотела заняться со мной сексом, в итоге" }}
-                </div>
-                <div class="col">
-                    {{> thumb image="./images/thumb-img1.jpg" title="Сводный брат отодрал свою красавицу сестру" }}
-                </div>
-            {{/repeat}}
-		</div>
+    <div class="thumbs">
+      {{#repeat 10}}
+      <div class="col">
+        {{> thumb image="./images/thumb-img2.jpg" title="Жена друга хотела заняться со мной сексом, в итоге" }}
+      </div>
+      <div class="col">
+        {{> thumb image="./images/thumb-img1.jpg" title="Сводный брат отодрал свою красавицу сестру" }}
+      </div>
+      {{/repeat}}
+    </div>
 
-        {{> pagination}}
-	</div>
+    {{> pagination}}
+  </div>
 </section>
 
 {{> footer}}

@@ -1,0 +1,102 @@
+{{> header pageTitle="Profile"}}
+
+<section class="section profile-page">
+  <div class="profile-page-main-layout">
+    <div class="profile-page-sidebar">
+      <!-- User Profile Header -->
+      <div class="profile-user-header">
+        <div class="profile-user-avatar">
+          <img src="./images/model1.png" alt="Maxpower" class="user-avatar-img">
+        </div>
+        <div class="profile-user-info">
+          <h3 class="user-name">Maxpower</h3>
+          <div class="avatar-actions">
+            <button class="change-avatar-btn">
+              <svg class="change-avatar-icon">
+                <use xlink:href="#icon-refresh"></use>
+              </svg>
+              <span>Сменить аватар</span>
+            </button>
+            <button class="delete-avatar-btn">
+              <svg class="delete-avatar-icon">
+                <use xlink:href="#icon-trash"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="profile-navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="profile-main.html" class="nav-link">
+              <svg class="nav-icon">
+                <use xlink:href="#icon-user"></use>
+              </svg>
+              <span class="nav-text">Профиль</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profile-favorites.html" class="nav-link">
+              <svg class="nav-icon">
+                <use xlink:href="#icon-heart"></use>
+              </svg>
+              <span class="nav-text">Избранное</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profile-subscriptions.html" class="nav-link">
+              <svg class="nav-icon">
+                <use xlink:href="#icon-star"></use>
+              </svg>
+              <span class="nav-text">Мои Подписки</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="profile-comments.html" class="nav-link">
+              <svg class="nav-icon">
+                <use xlink:href="#icon-comment"></use>
+              </svg>
+              <span class="nav-text">Мои комментарии</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profile-support.html" class="nav-link">
+              <svg class="nav-icon">
+                <use xlink:href="#icon-headset"></use>
+              </svg>
+              <span class="nav-text">Поддержка</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Logout Section -->
+        <div class="logout-section">
+          <hr class="nav-separator">
+          <a href="#" class="logout-link">
+            <svg class="logout-icon">
+              <use xlink:href="#icon-logout"></use>
+            </svg>
+            <span class="logout-text">Выйти</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="profile-page-content">
+      <!-- Content will be different for each page -->
+      <div class="profile-content-header">
+        <h1 class="content-title">Мои комментарии</h1>
+        <p class="content-description">История ваших комментариев</p>
+      </div>
+      
+      <div class="profile-content-body">
+        <!-- Profile content will go here -->
+        <p>Comments will be here</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> footer}}

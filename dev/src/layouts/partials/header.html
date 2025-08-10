@@ -1,323 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{pageTitle}}</title>
 
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{pageTitle}}</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..500;1,100..900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..500;1,100..900&display=swap"
+    rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="css/all.css" media="all">
-	</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-	<body>
-		{{> icons }}
+  <link rel="stylesheet" type="text/css" href="css/all.css" media="all">
+</head>
 
-		<div class="wrapper">
-      <!-- Logged in user will add to .header class .logged-in -->
-			<header class="header {{ showSearch }}">
-				<div class="container">
-					<div class="header-wrapper">
-						<div class="col">
-							<a href="/" class="logo">
-								<img src="./images/logo.svg" alt="logo" width="207" height="77">
-							</a>
-						</div>
-						<div class="col second">
-							<nav class="navbar" id="main-nav">
-								<a href="index.html" class="nav-item active-nav" data-id="1">
-									<svg class="svg-icon">
-										<use xlink:href="#icon-home"></use>
-									</svg>
-									<span class="nav-text"> Главная </span>
-									<div class="ellipse"></div>
-								</a>
-								<a href="categories.html" class="nav-item" data-id="2">
-									<svg class="svg-icon">
-										<use xlink:href="#icon-categories"></use>
-									</svg>
-									<span class="nav-text"> Категории </span>
-									<div class="ellipse"></div>
-								</a>
-								<a href="models.html" class="nav-item" data-id="3">
-									<svg class="svg-icon">
-										<use xlink:href="#icon-models"></use>
-									</svg>
-									<span class="nav-text"> Модели </span>
-									<div class="ellipse"></div>
-								</a>
-								<a href="studios.html" class="nav-item" data-id="4">
-									<svg class="svg-icon">
-										<use xlink:href="#icon-studies"></use>
-									</svg>
-									<span class="nav-text"> Студии </span>
-									<div class="ellipse"></div>
-								</a>
-								<a href="tags.html" class="nav-item" data-id="5">
-									<svg class="svg-icon">
-										<use xlink:href="#icon-tag"></use>
-									</svg>
-									<span class="nav-text"> Тэги </span>
-									<div class="ellipse"></div>
-								</a>
-							</nav>
-							<div class="search-container">
-								<button class="btn-search-standalone" id="search-btn">
-									<svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-								</button>
-								<div class="search-box" id="search-box">
-									<input type="text" class="search" id="search-input" placeholder="Search...">
-									<button class="btn-search" id="search-submit-btn">
-										<svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-									</button>
-								</div>
-								<div class="search-suggestions" id="search-suggestions">
-									<!-- Autocomplete suggestions will be populated here -->
-								</div>
-							</div>
-						</div>
-						<div class="col third">
-							<div class="auth-buttons">
-								<button class="btn-login" onclick="showLoginModal()">
-									<span>Вход</span>
-									<svg class="svg-icon">
-										<use xlink:href="#icon-user-login"></use>
-									</svg>
-								</button>
-								<button class="btn-register" onclick="showRegistrationModal()">
-									<span>Регистрация</span>
-									<svg class="svg-icon">
-										<use xlink:href="#icon-user-registration"></use>
-									</svg>
-								</button>
-							</div>
-							<div class="user-block">
-								<div class="user-profile">
-									<div class="user-avatar-wrapper">
-										<img src="./images/model1.png" alt="User Avatar" class="user-avatar">
-									</div>
-									<svg class="svg-icon chevron">
-										<use xlink:href="#icon-chevron-down"></use>
-									</svg>
-								</div>
-								<div class="user-dropdown">
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-user"></use>
-										</svg>
-										<span>Профиль</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-heart"></use>
-										</svg>
-										<span>Избранное</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-star"></use>
-										</svg>
-										<span>Мои Подписки</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-comment"></use>
-										</svg>
-										<span>Мои комментарии</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-headset"></use>
-										</svg>
-										<span>Поддержка</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-logout"></use>
-										</svg>
-										<span>Выйти</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col mobile-box">
-							<button type="button" class="btn-search" id="mobile-search-btn">
-								<svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-							</button>
-							<!-- Use existing user block for logged-in state -->
-							<div class="mobile-user-block logged-in-only">
-								<div class="user-profile">
-									<div class="user-avatar-wrapper">
-										<img src="./images/model1.png" alt="User Avatar" class="user-avatar">
-									</div>
-									<svg class="svg-icon chevron">
-										<use xlink:href="#icon-chevron-down"></use>
-									</svg>
-								</div>
-								<div class="user-dropdown">
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-user"></use>
-										</svg>
-										<span>Профиль</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-heart"></use>
-										</svg>
-										<span>Избранное</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-star"></use>
-										</svg>
-										<span>Мои Подписки</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-comment"></use>
-										</svg>
-										<span>Мои комментарии</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-headset"></use>
-										</svg>
-										<span>Поддержка</span>
-									</div>
-									<div class="dropdown-item">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-logout"></use>
-										</svg>
-										<span>Выйти</span>
-									</div>
-								</div>
-							</div>
+<body>
+  {{> icons }}
 
-							<div class="search-box js-search-box" id="mobile-search-box">
-								<input type="text" class="search" id="mobile-search-input" placeholder="Search...">
-								<button class="btn-search" id="mobile-search-submit">
-									<svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-
-      {{> register-modal}}
-      {{> login-modal}}
-			
-			<!-- Mobile search section below header -->
-			<div class="mobile-search-section">
-				<div class="container">
-					<div class="mobile-search-wrapper">
-						<div class="search-input-wrapper">
-							<input type="text" class="mobile-search-input" id="mobile-search-input-main" placeholder="Search...">
-							<button class="mobile-search-submit" id="mobile-search-submit-main">
-								<svg class="svg-icon"><use xlink:href="#icon-search"></use></svg>
-							</button>
-						</div>
-						<div class="mobile-search-suggestions" id="mobile-search-suggestions">
-							<!-- Mobile search suggestions will be populated here -->
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Mobile auth section below header for logged-out state -->
-			<div class="mobile-auth-section logged-out-only">
-				<div class="container">
-					<div class="auth-buttons">
-						<button class="btn-login" onclick="showLoginModal()">
-              <span>Вход</span>
-              <svg class="svg-icon">
-                <use xlink:href="#icon-user-login"></use>
-              </svg>
-            </button>
-            <button class="btn-register" onclick="showRegistrationModal()">
-              <span>Регистрация</span>
-              <svg class="svg-icon">
-                <use xlink:href="#icon-user-registration"></use>
-              </svg>
-            </button>
-					</div>
-				</div>
-			</div>
-			
-			<div class="mobile-nav">
-				<div class="container">
-					<div class="wrapper">
-						<div class="top-block">
-							<div class="col">
-								<a href="/" class="logo">
-									<img src="./images/logo.svg" alt="logo" width="207" height="77">
-								</a>
-							</div>
-							<div class="col mobile-box">
-								<button type="button" class="btn-close {{showSearch}}" id="mobile-close-btn">
-									<svg class="svg-icon"><use xlink:href="#icon-close"></use></svg>
-								</button>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li>
-									<a href="index.html" class="active">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-home"></use>
-										</svg>
-										<span> Главная </span>
-										<div class="ellipse"></div>
-									</a>
-								</li>
-								<li>
-									<a href="categories.html">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-categories"></use>
-										</svg>
-										<span> Категории </span>
-										<div class="ellipse"></div>
-									</a>
-								</li>
-								<li>
-									<a href="models.html">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-models"></use>
-										</svg>
-										<span> Модели </span>
-										<div class="ellipse"></div>
-									</a>
-								</li>
-								<li>
-									<a href="studios.html">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-studies"></use>
-										</svg>
-										<span> Студии </span>
-										<div class="ellipse"></div>
-									</a>
-								</li>
-								<li>
-									<a href="tags.html" class="nav-item" data-id="5">
-										<svg class="svg-icon">
-											<use xlink:href="#icon-tag"></use>
-										</svg>
-										<span> Тэги </span>
-										<div class="ellipse"></div>
-									</a>
-								</li>
-							</ul>
-						</nav>
-						<div class="auth-buttons">
-							<button class="btn-login" onclick="showLoginModal()">
+  <div class="wrapper">
+    <!-- Logged in user will add to .header class .logged-in -->
+    <header class="header {{ showSearch }}">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="col">
+            <a href="/" class="logo">
+              <img src="./images/logo.svg" alt="logo" width="207" height="77">
+            </a>
+          </div>
+          <div class="col second">
+            <nav class="navbar" id="main-nav">
+              <a href="index.html" class="nav-item active-nav" data-id="1">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-home"></use>
+                </svg>
+                <span class="nav-text"> Главная </span>
+                <div class="ellipse"></div>
+              </a>
+              <a href="categories.html" class="nav-item" data-id="2">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-categories"></use>
+                </svg>
+                <span class="nav-text"> Категории </span>
+                <div class="ellipse"></div>
+              </a>
+              <a href="models.html" class="nav-item" data-id="3">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-models"></use>
+                </svg>
+                <span class="nav-text"> Модели </span>
+                <div class="ellipse"></div>
+              </a>
+              <a href="studios.html" class="nav-item" data-id="4">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-studies"></use>
+                </svg>
+                <span class="nav-text"> Студии </span>
+                <div class="ellipse"></div>
+              </a>
+              <a href="tags.html" class="nav-item" data-id="5">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-tag"></use>
+                </svg>
+                <span class="nav-text"> Тэги </span>
+                <div class="ellipse"></div>
+              </a>
+            </nav>
+            <div class="search-container">
+              <button class="btn-search-standalone" id="search-btn">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+              <div class="search-box" id="search-box">
+                <input type="text" class="search" id="search-input" placeholder="Search...">
+                <button class="btn-search" id="search-submit-btn">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="search-suggestions" id="search-suggestions">
+                <!-- Autocomplete suggestions will be populated here -->
+              </div>
+            </div>
+          </div>
+          <div class="col third">
+            <div class="auth-buttons">
+              <button class="btn-login" onclick="showLoginModal()">
                 <span>Вход</span>
                 <svg class="svg-icon">
                   <use xlink:href="#icon-user-login"></use>
@@ -329,45 +103,285 @@
                   <use xlink:href="#icon-user-registration"></use>
                 </svg>
               </button>
-						</div>
-					</div>
-				</div>
-			</div>
+            </div>
+            <div class="user-block">
+              <div class="user-profile">
+                <div class="user-avatar-wrapper">
+                  <img src="./images/model1.png" alt="User Avatar" class="user-avatar">
+                </div>
+                <svg class="svg-icon chevron">
+                  <use xlink:href="#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <div class="user-dropdown">
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  <span>Профиль</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                  <span>Избранное</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span>Мои Подписки</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-comment"></use>
+                  </svg>
+                  <span>Мои комментарии</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-headset"></use>
+                  </svg>
+                  <span>Поддержка</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-logout"></use>
+                  </svg>
+                  <span>Выйти</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mobile-box">
+            <button type="button" class="btn-search" id="mobile-search-btn">
+              <svg class="svg-icon">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+            <!-- Use existing user block for logged-in state -->
+            <div class="mobile-user-block logged-in-only">
+              <div class="user-profile">
+                <div class="user-avatar-wrapper">
+                  <img src="./images/model1.png" alt="User Avatar" class="user-avatar">
+                </div>
+                <svg class="svg-icon chevron">
+                  <use xlink:href="#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <div class="user-dropdown">
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  <span>Профиль</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                  <span>Избранное</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <span>Мои Подписки</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-comment"></use>
+                  </svg>
+                  <span>Мои комментарии</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-headset"></use>
+                  </svg>
+                  <span>Поддержка</span>
+                </div>
+                <div class="dropdown-item">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-logout"></use>
+                  </svg>
+                  <span>Выйти</span>
+                </div>
+              </div>
+            </div>
 
-			<!-- Mobile Bottom Navigation -->
-			<nav class="mobile-bottom-nav">
-				<div class="nav-container">
-					<a href="index.html" class="nav-item active" data-id="1">
-						<svg class="svg-icon">
-							<use xlink:href="#icon-home"></use>
-						</svg>
-						<span class="nav-text">Главная</span>
-					</a>
-					<a href="categories.html" class="nav-item" data-id="2">
-						<svg class="svg-icon">
-							<use xlink:href="#icon-categories"></use>
-						</svg>
-						<span class="nav-text">Категории</span>
-					</a>
-					<a href="models.html" class="nav-item" data-id="3">
-						<svg class="svg-icon">
-							<use xlink:href="#icon-models"></use>
-						</svg>
-						<span class="nav-text">Модели</span>
-					</a>
-					<a href="studios.html" class="nav-item" data-id="4">
-						<svg class="svg-icon">
-							<use xlink:href="#icon-studies"></use>
-						</svg>
-						<span class="nav-text">Студии</span>
-					</a>
-					<a href="tags.html" class="nav-item" data-id="5">
-						<svg class="svg-icon">
-							<use xlink:href="#icon-tag"></use>
-						</svg>
-						<span class="nav-text">Тэги</span>
-					</a>
-				</div>
-			</nav>
+            <div class="search-box js-search-box" id="mobile-search-box">
+              <input type="text" class="search" id="mobile-search-input" placeholder="Search...">
+              <button class="btn-search" id="mobile-search-submit">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-			<div class="main">
+    {{> register-modal}}
+    {{> login-modal}}
+
+    <!-- Mobile search section below header -->
+    <div class="mobile-search-section">
+      <div class="container">
+        <div class="mobile-search-wrapper">
+          <div class="search-input-wrapper">
+            <input type="text" class="mobile-search-input" id="mobile-search-input-main" placeholder="Search...">
+            <button class="mobile-search-submit" id="mobile-search-submit-main">
+              <svg class="svg-icon">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-search-suggestions" id="mobile-search-suggestions">
+            <!-- Mobile search suggestions will be populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile auth section below header for logged-out state -->
+    <div class="mobile-auth-section logged-out-only">
+      <div class="container">
+        <div class="auth-buttons">
+          <button class="btn-login" onclick="showLoginModal()">
+            <span>Вход</span>
+            <svg class="svg-icon">
+              <use xlink:href="#icon-user-login"></use>
+            </svg>
+          </button>
+          <button class="btn-register" onclick="showRegistrationModal()">
+            <span>Регистрация</span>
+            <svg class="svg-icon">
+              <use xlink:href="#icon-user-registration"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-nav">
+      <div class="container">
+        <div class="wrapper">
+          <div class="top-block">
+            <div class="col">
+              <a href="/" class="logo">
+                <img src="./images/logo.svg" alt="logo" width="207" height="77">
+              </a>
+            </div>
+            <div class="col mobile-box">
+              <button type="button" class="btn-close {{showSearch}}" id="mobile-close-btn">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html" class="active">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-home"></use>
+                  </svg>
+                  <span> Главная </span>
+                  <div class="ellipse"></div>
+                </a>
+              </li>
+              <li>
+                <a href="categories.html">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-categories"></use>
+                  </svg>
+                  <span> Категории </span>
+                  <div class="ellipse"></div>
+                </a>
+              </li>
+              <li>
+                <a href="models.html">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-models"></use>
+                  </svg>
+                  <span> Модели </span>
+                  <div class="ellipse"></div>
+                </a>
+              </li>
+              <li>
+                <a href="studios.html">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-studies"></use>
+                  </svg>
+                  <span> Студии </span>
+                  <div class="ellipse"></div>
+                </a>
+              </li>
+              <li>
+                <a href="tags.html" class="nav-item" data-id="5">
+                  <svg class="svg-icon">
+                    <use xlink:href="#icon-tag"></use>
+                  </svg>
+                  <span> Тэги </span>
+                  <div class="ellipse"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="auth-buttons">
+            <button class="btn-login" onclick="showLoginModal()">
+              <span>Вход</span>
+              <svg class="svg-icon">
+                <use xlink:href="#icon-user-login"></use>
+              </svg>
+            </button>
+            <button class="btn-register" onclick="showRegistrationModal()">
+              <span>Регистрация</span>
+              <svg class="svg-icon">
+                <use xlink:href="#icon-user-registration"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-item active" data-id="1">
+          <svg class="svg-icon">
+            <use xlink:href="#icon-home"></use>
+          </svg>
+          <span class="nav-text">Главная</span>
+        </a>
+        <a href="categories.html" class="nav-item" data-id="2">
+          <svg class="svg-icon">
+            <use xlink:href="#icon-categories"></use>
+          </svg>
+          <span class="nav-text">Категории</span>
+        </a>
+        <a href="models.html" class="nav-item" data-id="3">
+          <svg class="svg-icon">
+            <use xlink:href="#icon-models"></use>
+          </svg>
+          <span class="nav-text">Модели</span>
+        </a>
+        <a href="studios.html" class="nav-item" data-id="4">
+          <svg class="svg-icon">
+            <use xlink:href="#icon-studies"></use>
+          </svg>
+          <span class="nav-text">Студии</span>
+        </a>
+        <a href="tags.html" class="nav-item" data-id="5">
+          <svg class="svg-icon">
+            <use xlink:href="#icon-tag"></use>
+          </svg>
+          <span class="nav-text">Тэги</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="main">

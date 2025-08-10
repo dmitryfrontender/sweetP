@@ -1,0 +1,131 @@
+{{> header pageTitle="Single Model"}}
+
+<section class="section">
+  <div class="container">
+
+    <div class="model-info">
+      <div class="model-info-left">
+        <div class="model-info-left-img">
+          <img src="./images/model1.png" alt="LuxuryMur">
+        </div>
+      </div>
+      <div class="model-info-middle">
+        <div class="model-name">
+          <h1>LuxuryMur</h1>
+        </div>
+        <div class="model-details">
+          <div class="details-section">
+            <h3>Личные данные</h3>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-profile"></use></svg>
+              </div>
+              <span class="detail-label">Пол:</span>
+              <span class="detail-value">Женский</span>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-location"></use></svg>
+              </div>
+              <span class="detail-label">Страна:</span>
+              <span class="detail-value">США</span>
+              <div class="country-flag">
+                <svg><use href="#icon-flag-us"></use></svg>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-calendar"></use></svg>
+              </div>
+              <span class="detail-label">Возраст:</span>
+              <span class="detail-value">33 года</span>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-ruler"></use></svg>
+              </div>
+              <span class="detail-label">Рост:</span>
+              <span class="detail-value">162 см</span>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-weight"></use></svg>
+              </div>
+              <span class="detail-label">Вес:</span>
+              <span class="detail-value">57 кг</span>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <svg><use href="#icon-globe"></use></svg>
+              </div>
+              <span class="detail-label">Национальность:</span>
+              <span class="detail-value">Великобритания</span>
+              <div class="country-flag">
+                <svg><use href="#icon-flag-uk"></use></svg>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link tiktok">
+              <svg><use href="#icon-tiktok"></use></svg>
+            </a>
+            <a href="#" class="social-link instagram">
+              <svg><use href="#icon-instagram"></use></svg>
+            </a>
+            <a href="#" class="social-link telegram">
+              <svg><use href="#icon-telegram"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="model-info-right">
+        <div class="model-description">
+          <h3>О моделе</h3>
+          <p>Luxury Mur — британская модель и актриса фильмов для взрослых, родилась 5 июня 1997 года в Лондоне.</p>
+          <p>Известна благодаря съёмкам для популярных студий, таких как RK Prime и Life Selector. Обладает привлекательной внешностью: голубые глаза, светлые волосы, стройная фигура. Начала карьеру в 2021 году и быстро завоевала внимание зрителей.</p>
+          <p>Активна в TikTok, но личную жизнь предпочитает не афишировать.</p>
+        </div>
+        <div class="model-actions">
+          <button class="model-subscribe-btn">
+            <span>Подписаться</span>
+            <svg><use href="#icon-star"></use></svg>
+          </button>
+          <span class="subscribers-count">765 подписчиков</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading">
+      <h2 class="title-name">ВИДЕО С LuxuryMur</h2>
+      <div class="sort-box">
+        <div class="sort-box-wrapper">
+          <div class="sort-form" id="list_videos_most_recent_videos_sort_list">
+            <div class="form-group">
+              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="thumbs">
+      {{#repeat 10}}
+      <div class="col">
+        {{> thumb image="./images/thumb-img2.jpg" title="Жена друга хотела заняться со мной сексом, в итоге" }}
+      </div>
+      <div class="col">
+        {{> thumb image="./images/thumb-img1.jpg" title="Сводный брат отодрал свою красавицу сестру" }}
+      </div>
+      {{/repeat}}
+    </div>
+
+    {{> pagination}}
+  </div>
+</section>
+
+{{> footer}}
