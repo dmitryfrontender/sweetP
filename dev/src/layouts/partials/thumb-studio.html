@@ -2,6 +2,28 @@
     <a href="#" class="thumb-link">
         <span class="box-img">
             <img src="{{image}}" class="thumb-img" alt="">
+            <button class="subscribe-btn" data-subscribed="{{#if subscribed}}{{subscribed}}{{else}}false{{/if}}">
+                <!-- Default state: star icon -->
+                <div class="subscribe-default">
+                    <svg class="subscribe-icon">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                </div>
+                <!-- Hover state: full button -->
+                <div class="subscribe-hover">
+                    <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
+                    <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
+                    <svg class="subscribe-icon">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                </div>
+                <!-- Subscribed state: checkmark -->
+                <div class="subscribe-subscribed">
+                    <svg class="subscribe-icon">
+                        <use xlink:href="#icon-check"></use>
+                    </svg>
+                </div>
+            </button>
         </span>
         <span class="description">
             <span class="info">
@@ -17,10 +39,15 @@
                         <svg class="svg-icon">
                             <use xlink:href="#icon-camera"></use>
                         </svg>
-                        <span class="value">95</span>
+                        <span class="value">{{#if videos}}{{videos}}{{else}}95{{/if}}</span>
                     </span>
                 </span>
             </span>
+            <div class="subscriber-info">
+                <span class="subscriber-count" data-base-count="{{#if baseSubscribers}}{{baseSubscribers}}{{else}}1250{{/if}}">
+                    {{#if baseSubscribers}}{{baseSubscribers}}{{else}}1250{{/if}} подписчиков
+                </span>
+            </div>
         </span>
     </a>
 </div>

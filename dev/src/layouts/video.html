@@ -2,7 +2,8 @@
 
 <section class="section">
     <div class="container">
-        <div class="video-wrapper">
+        <div class="video-main-layout">
+            <div class="video-content">
             <div class="player-wrap">
                 <img src="./images/player.jpg" class="kt-player" alt="player">
 
@@ -21,6 +22,14 @@
                 <div class="sharing-container">
                     <ul class="list-btns">
                         <li>
+                            <a href="#favorites" class="button">
+                                <svg class='svg-icon favorites-icon'>
+                                    <use xlink:href='#icon-double-heart'></use>
+                                </svg>
+                                <span>Избранное</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="#download" class="button">
                                 <svg class='svg-icon download-icon'>
                                     <use xlink:href='#icon-square-arrow-down'></use>
@@ -29,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#download" class="button">
+                            <a href="#share" class="button">
                                 <svg class='svg-icon share-icon'>
                                     <use xlink:href='#icon-square-link'></use>
                                 </svg>
@@ -40,152 +49,259 @@
                 </div>
             </div>
 
-            <div class="info-cols">
-                <div class="col">
-                    <div class="info-cols-top">
-                        <div class="text-box">
-                            <ul class="list-info">
-                                <li>
-                                    <svg class="svg-icon">
-                                        <use xlink:href="#icon-eye"></use>
-                                    </svg>
-                                    <span class="value">225k</span>
-                                </li>
-                                <li>
-                                    <svg class="svg-icon">
-                                        <use xlink:href="#icon-heart"></use>
-                                    </svg>
-                                    <span class="value">87%</span>
-                                </li>
-                                <li>
-                                    <svg class="svg-icon">
-                                        <use xlink:href="#icon-clock"></use>
-                                    </svg>
-                                    <span class="value">12:49</span>
-                                </li>
-                            </ul>
+            <div class="video-description">
+                <div class="video-stats">
+                    <div class="like-dislike-buttons">
+                        <button class="like-btn active">
+                            <svg class="like-icon"><use xlink:href="#icon-like"></use></svg>
+                            <span class="like-count">5</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <svg class="dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                        </button>
+                    </div>
+                    
+                    <div class="video-metrics">
+                        <div class="metric">
+                            <svg class="metric-icon"><use xlink:href="#icon-eye"></use></svg>
+                            <span class="metric-value views">92k</span>
+                        </div>
+                        <div class="metric">
+                            <svg class="metric-icon"><use xlink:href="#icon-heart"></use></svg>
+                            <span class="metric-value">87%</span>
+                        </div>
+                        <div class="metric">
+                            <svg class="metric-icon"><use xlink:href="#icon-clock"></use></svg>
+                            <span class="metric-value">12:49</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description-section">
+                    <h3 class="description-title">Описание</h3>
+                    <p class="description-text">Горячая десвушка занимается сексом с приятелем своего сына по колледжу, Джимми Майклсом. Она была так занята тем, что ее отсасывал молодой парень, что едва ли знала (или заботилась), какой сегодня день. Когда сын и дочь Эшлин заходят к ней, чтобы сделать сюрприз на День матери, а она в это время занимается сексом с Джимми, она застигнута врасплох и говорит своему приятелю, чтобы он улизнул из дома, пока его не заметили. Однако возбужденный Джимми предпочитает развлекаться тайком и продолжает трахать свою большую натуральную красотку за спинами братьев и сестер - и Эшлин просто не может устоять перед его большим членом! В конце концов, это ее день, и она должна получить то, что действительно хочет!</p>
+                </div>
+            </div>
+            
+            <div class="comments-section">
+                <div class="comment-form">
+                    <textarea class="comment-input" placeholder="Комментарий"></textarea>
+                    <button class="comment-submit">
+                        <svg class="comment-icon"><use xlink:href="#icon-comment"></use></svg>
+                        Оставаить комментарий
+                    </button>
+                </div>
+                
+                <div class="comments-list">
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="./images/comment-avatar.png" alt="Валик 20см">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Валик 20см</span>
+                            </div>
+                            <p class="comment-text">Неплохая девчонка, с ней то я бы оторовался, а парень так себе, неумёха, вот я!! Говорила мама иди в порнуху сниматься..</p>
+                            <div class="comment-actions">
+                                <button class="comment-like active">
+                                    <svg class="comment-like-icon"><use xlink:href="#icon-like"></use></svg>
+                                    <span class="comment-like-count">5</span>
+                                </button>
+                                <button class="comment-dislike">
+                                    <svg class="comment-dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="./images/comment-avatar.png" alt="Sintepon">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Sintepon</span>
+                            </div>
+                            <p class="comment-text">Нормальные сиськи</p>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <svg class="comment-like-icon"><use xlink:href="#icon-like"></use></svg>
+                                    <span class="comment-like-count">6</span>
+                                </button>
+                                <button class="comment-dislike active">
+                                    <svg class="comment-dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                                    <span class="comment-dislike-count">1</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="info-name">Описание:</div>
-                        <p class="text-description">25-летняя брюнетка Amara Romani не обладает большими сиськами и чем-то таким выдающимся, а её главный козырь - умение себя красиво и эффективно подать на камеру. Сегодня девке приходит договор о съемках для студии MOFOS и она, лежа в постели, старается его внимательно читать. Но тут в комнату входит оператор и отвлекает модель от съёмок, шлепнув её по жопе. Сучка заводится с полуоборота и уже собирается скандалить, как перенаправляет страсть на шикарный минет со слюнями и еблю в киску с интимной стрижкой на лобке. Амара действительно знает, что нужно зрителю и любовнику.</p>
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="./images/comment-avatar.png" alt="Davalka2000">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Davalka2000</span>
+                            </div>
+                            <p class="comment-text">Ничего себе у него аппаратик, сейчас бы с прыгнула с разгону на такую шляпу ухх</p>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <svg class="comment-like-icon"><use xlink:href="#icon-like"></use></svg>
+                                </button>
+                                <button class="comment-dislike">
+                                    <svg class="comment-dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="row">
-                        <div class="inner-row">
-                            <div class="info-name">Теги:</div>
-                            <ul class="list-btn">
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        Best Porn
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        3dXpassion
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        Natasha Nice
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        Brazzers
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        Love Home Porn
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        Best Porn
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-tag'></use>
-                                        </svg>
-                                        3dXpassion
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="./images/comment-avatar.png" alt="Галимый дрочер">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Галимый дрочер</span>
+                            </div>
+                            <p class="comment-text">Мдаа, какие стервочки нынче, оторва ещё та</p>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <svg class="comment-like-icon"><use xlink:href="#icon-like"></use></svg>
+                                    <span class="comment-like-count">1</span>
+                                </button>
+                                <button class="comment-dislike">
+                                    <svg class="comment-dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                                </button>
+                            </div>
+                        </div>
                         </div>
 
-                        <div class="inner-row">
-                            <div class="info-name">Категории:</div>
-                            <ul class="list-btn">
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-categories'></use>
-                                        </svg>
-                                        Брюнетки
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-categories'></use>
-                                        </svg>
-                                        Групповуха
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="btn">
-                                        <svg class='svg-icon '>
-                                            <use xlink:href='#icon-categories'></use>
-                                        </svg>
-                                        В бане
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="./images/comment-avatar.png" alt="Ваня пылесос">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">Ваня пылесос</span>
+                            </div>
+                            <p class="comment-text">А мне этот придурок понравился, я бы ему высосал очко!</p>
+                            <div class="comment-actions">
+                                <button class="comment-like">
+                                    <svg class="comment-like-icon"><use xlink:href="#icon-like"></use></svg>
+                                    <span class="comment-like-count">1</span>
+                                </button>
+                                <button class="comment-dislike">
+                                    <svg class="comment-dislike-icon"><use xlink:href="#icon-dislike"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                         </div>
 
-                        <div class="inner-row second">
-                            <div class="info-name">Модель:</div>
-
-                            <ul class="list-link">
-                                <li class="item">
-                                    <a href="#">Best Porn</a>,
-                                </li>
-                                <li class="item">
-                                    <a href="#">3dXpassion</a>
-                                </li>
-                            </ul>
+                <button class="show-more-comments">
+                    Показать ещё
+                    <svg class="show-more-icon"><use xlink:href="#arrow-down-circle"></use></svg>
+                </button>
+                <button class="show-less-comments">
+                    Показать меньше
+                    <svg class="show-less-icon"><use xlink:href="#arrow-up-circle"></use></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="video-sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">В ролях</h3>
+                    <div class="models-in-video">
+                        <div class="model-card">
+                            <div class="model-avatar">
+                                <img src="./images/model1.png" alt="LuxuryMur">
+                            </div>
+                            <div class="model-info">
+                                <div class="model-name">LuxuryMur</div>
+                                <div class="model-videos">
+                                    <svg class="video-icon"><use xlink:href="#icon-camera"></use></svg>
+                                    <span class="video-count">96</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="inner-row second">
-                            <div class="info-name">Студия:</div>
-
-                            <ul class="list-link">
-                                <li class="item">
-                                    <a href="#">Brazers</a>
-                                </li>
-                            </ul>
+                        <div class="model-card">
+                            <div class="model-avatar">
+                                <img src="./images/model2.png" alt="Den Baltimor">
+                            </div>
+                            <div class="model-info">
+                                <div class="model-name">Den Baltimor</div>
+                                <div class="model-videos">
+                                    <svg class="video-icon"><use xlink:href="#icon-camera"></use></svg>
+                                    <span class="video-count">162</span>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Тэги</h3>
+                    <div class="tags-list">
+                        <div class="tag-item">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Красотки</span>
+                        </div>
+                        <div class="tag-item">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Огромные жопы</span>
+                        </div>
+                        <div class="tag-item">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Большие сиськи</span>
+                        </div>
+                        <div class="tag-item active">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Молодые</span>
+                        </div>
+                        <div class="tag-item">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Домашнее</span>
+                        </div>
+                        <div class="tag-item">
+                            <svg class="tag-icon"><use xlink:href="#icon-tag"></use></svg>
+                            <span class="tag-text">Сперма</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Категории</h3>
+                    <div class="categories-list">
+                        <div class="category-item">
+                            <svg class="category-icon"><use xlink:href="#icon-categories"></use></svg>
+                            <span class="category-text">Брюнетки</span>
+                        </div>
+                        <div class="category-item">
+                            <svg class="category-icon"><use xlink:href="#icon-categories"></use></svg>
+                            <span class="category-text">Групповуха</span>
+                        </div>
+                        <div class="category-item">
+                            <svg class="category-icon"><use xlink:href="#icon-categories"></use></svg>
+                            <span class="category-text">В бане</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Модели</h3>
+                    <div class="sidebar-models">
+                        <span class="model-link">Ashlyn Peaks</span>
+                        <span class="comma">, </span>
+                        <span class="model-link">Jimmy Michaels</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Студия</h3>
+                    <div class="sidebar-studio">
+                        <span class="studio-link">PornHub</span>
                     </div>
                 </div>
             </div>
@@ -213,9 +329,17 @@
         <div class="show-more">
             <a class="show-more-btn" href="#">
                 <svg class='svg-icon '>
-                    <use xlink:href='#icon-square-double-angle-down'></use>
+                    <use xlink:href='#arrow-down-circle'></use>
                 </svg>
                 Показать еще
+            </a>
+        </div>
+        <div class="show-less">
+            <a class="show-less-btn" href="#">
+                <svg class='svg-icon '>
+                    <use xlink:href='#arrow-up-circle'></use>
+                </svg>
+                Показать меньше
             </a>
         </div>
 	</div>

@@ -56,9 +56,68 @@ function setNavItem () {
 				$(this).removeClass('active-nav');
 			}
 
-		});
+			});
 
-	})
+}
+
+// Subscribe button functionality
+function initSubscribeButtons() {
+	const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+	
+	subscribeButtons.forEach(button => {
+		button.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
+			const isSubscribed = this.getAttribute('data-subscribed') === 'true';
+			
+			// Add click animation
+			this.style.transform = 'scale(0.95)';
+			this.style.transition = 'transform 0.1s ease';
+			
+			setTimeout(() => {
+				this.style.transform = 'scale(1)';
+				
+				// Toggle subscription state after animation
+				this.setAttribute('data-subscribed', !isSubscribed);
+				
+				// Update subscriber count
+				const subscriberElement = this.closest('.thumb-models, .thumb-studio').querySelector('.subscriber-count');
+				if (subscriberElement) {
+					const baseCount = parseInt(subscriberElement.getAttribute('data-base-count')) || 765;
+					const newCount = !isSubscribed ? baseCount + 1 : baseCount;
+					
+					// Animate the count change
+					subscriberElement.style.transform = 'scale(0.9)';
+					subscriberElement.style.opacity = '0.5';
+					
+					setTimeout(() => {
+						subscriberElement.textContent = `${newCount} подписчиков`;
+						subscriberElement.style.transform = 'scale(1)';
+						subscriberElement.style.opacity = '1';
+					}, 150);
+				}
+				
+				// Add success animation for new subscription
+				if (!isSubscribed) {
+					this.classList.add('subscribe-success');
+					setTimeout(() => {
+						this.classList.remove('subscribe-success');
+					}, 600);
+					console.log('Subscribed to model');
+				} else {
+					console.log('Unsubscribed from model');
+				}
+			}, 100);
+		});
+	});
+}
+
+// Initialize subscribe buttons when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+	initSubscribeButtons();
+});
+
 }
 
 function showList() {
