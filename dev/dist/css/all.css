@@ -7122,25 +7122,6 @@ footer .footer-bottom .footer-wrap .footer-light {
 		font-size: 13px;
 	}
 }
-/* Profile Icon Styling */
-.input-icon,
-.input-icon-left,
-.input-icon-right {
-	fill: white !important;
-}
-
-.input-icon use,
-.input-icon-left use,
-.input-icon-right use,
-.detail-icon use {
-	fill: white !important;
-}
-
-/* User icon styling - white everywhere except support form */
-svg use {
-	fill: white !important;
-}
-
 /* Support form user icon should be light gray */
 .support-form-icon use {
 	fill: #C8C8C8 !important;
