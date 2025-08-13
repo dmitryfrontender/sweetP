@@ -9,6 +9,7 @@ $(document).ready(function () {
 	searchAutocomplete();
 	userDropdown();
 	signInModal();
+	hideFooterTopOnProfile();
 });
 
 $(window).on('load', function () {
@@ -263,16 +264,16 @@ function searchAutocomplete() {
 	
 	// Sample search data - replace with your actual data
 	const searchData = [
-		{ title: 'Большие сиськи в масле', type: 'category', icon: 'icon-categories' },
-		{ title: 'Дрочет на большие сиськи', type: 'category', icon: 'icon-categories' },
-		{ title: 'Продемонстрировала свои большие сиськи', type: 'category', icon: 'icon-categories' },
-		{ title: 'Брат увидел большие сиськи сестры', type: 'category', icon: 'icon-categories' },
-		{ title: 'Обожает большие сиськи', type: 'category', icon: 'icon-categories' },
-		{ title: 'Анал с большими сиськами', type: 'category', icon: 'icon-categories' },
-		{ title: 'Блондинка с большими сиськами', type: 'model', icon: 'icon-models' },
-		{ title: 'Брюнетка с большими сиськами', type: 'model', icon: 'icon-models' },
-		{ title: 'Рыжая с большими сиськами', type: 'model', icon: 'icon-models' },
-		{ title: 'МILF с большими сиськами', type: 'model', icon: 'icon-models' }
+		{ title: 'Большие сиськи в масле', type: 'category' },
+		{ title: 'Дрочет на большие сиськи', type: 'category' },
+		{ title: 'Продемонстрировала свои большие сиськи', type: 'category' },
+		{ title: 'Брат увидел большие сиськи сестры', type: 'category' },
+		{ title: 'Обожает большие сиськи', type: 'category' },
+		{ title: 'Анал с большими сиськами', type: 'category' },
+		{ title: 'Блондинка с большими сиськами', type: 'model' },
+		{ title: 'Брюнетка с большими сиськами', type: 'model' },
+		{ title: 'Рыжая с большими сиськами', type: 'model' },
+		{ title: 'МILF с большими сиськами', type: 'model' }
 	];
 	
 	function showSuggestions(query, $input, $suggestionsContainer) {
@@ -288,9 +289,6 @@ function searchAutocomplete() {
 		if (filtered.length > 0) {
 			const suggestionsHtml = filtered.map(item => `
 				<div class="suggestion-item" data-type="${item.type}" data-title="${item.title}">
-					<svg class="svg-icon">
-						<use xlink:href="#${item.icon}"></use>
-					</svg>
 					<span class="suggestion-text">${item.title}</span>
 					<div class="suggestion-arrow">
 						<svg class="svg-icon">
@@ -607,4 +605,13 @@ function signInModal() {
 		// Reset form
 		$(this)[0].reset();
 	});
+}
+
+// Hide footer-top on profile pages
+function hideFooterTopOnProfile() {
+	// Check if current URL contains 'profile'
+	if (window.location.href.toLowerCase().includes('profile')) {
+		// Hide the footer-top element
+		$('.footer-top').hide();
+	}
 }

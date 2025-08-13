@@ -335,6 +335,11 @@
         d="M7.99401 13.1878C7.84873 13.1923 7.7072 13.2314 7.5799 13.3012L4.25054 15.0404C3.84317 15.2348 3.35567 15.0839 3.12728 14.6943C3.04266 14.5352 3.01195 14.3528 3.04041 14.1741L3.70538 10.4774C3.75031 10.2086 3.66045 9.93542 3.465 9.74627L0.745953 7.11386C0.423201 6.79785 0.417211 6.27917 0.733223 5.95566C0.737716 5.95115 0.74146 5.9474 0.745953 5.94365C0.874754 5.81604 1.041 5.73197 1.21997 5.7057L4.97392 5.15325C5.24575 5.11872 5.48164 4.94908 5.60145 4.70288L7.23318 1.29734C7.38819 1.02261 7.68549 0.858979 8 0.876243C7.99401 1.09918 7.99401 13.0362 7.99401 13.1878"
         fill="white" />
     </symbol>
+    <symbol id="icon-star-crossed" viewBox="0 0 16 16">
+      <path opacity="0.4" d="M14.5303 5.33035C14.7092 5.35666 14.8752 5.44108 15.0039 5.56863C15.0083 5.57234 15.0122 5.57589 15.0166 5.58035C15.3326 5.90386 15.3267 6.42254 15.0039 6.73855L12.2852 9.37039C12.0897 9.55953 12 9.83312 12.0449 10.1018L12.71 13.7991C12.7383 13.9775 12.7075 14.1597 12.623 14.3186C12.3946 14.7082 11.9064 14.8597 11.499 14.6653L8.16992 12.926C8.04262 12.8562 7.90113 12.8173 7.75586 12.8128C7.75586 12.759 7.75417 11.2225 7.75391 9.25222L12.043 4.96316L14.5303 5.33035ZM7.75 0.501245C8.06451 0.483981 8.36159 0.647418 8.5166 0.922143L10.1484 4.32742C10.1921 4.41711 10.2517 4.49623 10.3223 4.56277L7.75293 7.1321C7.75222 3.96363 7.75314 0.625972 7.75 0.501245Z" fill="white"/>
+      <path d="M7.74398 12.8128C7.59877 12.8173 7.45718 12.8563 7.32992 12.926L3.99984 14.6653C3.59255 14.8594 3.10511 14.7081 2.87679 14.3186C2.84405 14.257 2.82178 14.1913 2.80551 14.1243C2.91776 14.0598 3.02501 13.9819 3.12093 13.886L7.74496 9.26101C7.74469 11.227 7.74398 12.7591 7.74398 12.8128ZM7.74593 7.13894L3.16293 11.7219L3.45492 10.1018C3.49982 9.83313 3.41012 9.55952 3.21468 9.37039L0.495935 6.73855C0.173183 6.42254 0.167228 5.90386 0.48324 5.58035C0.487675 5.5759 0.491485 5.57234 0.495935 5.56863C0.624727 5.44103 0.790609 5.35662 0.969568 5.33035L4.72347 4.77761C4.9953 4.74308 5.23159 4.57362 5.3514 4.32742L6.98324 0.922143C7.13825 0.647418 7.43533 0.483981 7.74984 0.501245C7.7467 0.62597 7.74664 3.96839 7.74593 7.13894Z" fill="white"/>
+      <path d="M13.4482 2.90951C13.6677 2.6956 14.0117 2.69545 14.2238 2.90951C14.4432 3.12361 14.4432 3.47834 14.2238 3.69247L2.6845 15.3372C2.57483 15.4472 2.43595 15.499 2.29704 15.4991C2.15802 15.4991 2.0113 15.4473 1.90886 15.3372C1.7261 15.1527 1.69683 14.857 1.84294 14.6429L1.86492 14.6129L12.6872 3.69247C12.7018 3.67773 12.7165 3.66253 12.7238 3.64779C12.7383 3.63312 12.7532 3.61852 12.7604 3.60385L13.4482 2.90951Z" fill="white"/>
+    </symbol>
     <symbol id="icon-comment" viewBox="0 0 16 16">
       <path opacity="0.4"
         d="M8.015 0.5C3.6575 0.5 0.5 4.055 0.5 8C0.5 9.26 0.8675 10.5575 1.5125 11.7425C1.6325 11.9375 1.6475 12.185 1.565 12.4175L1.0625 14.0975C0.95 14.5025 1.295 14.8025 1.6775 14.6825L3.1925 14.2325C3.605 14.0975 3.9275 14.27 4.31075 14.5025C5.40575 15.1475 6.77 15.4775 8 15.4775C11.72 15.4775 15.5 12.605 15.5 7.9775C15.5 3.9875 12.275 0.5 8.015 0.5"
@@ -758,6 +763,9 @@
                   </svg>
                   <span>Поддержка</span>
                 </div>
+                
+                <hr class="nav-separator">
+
                 <div class="dropdown-item">
                   <svg class="svg-icon">
                     <use xlink:href="#icon-logout"></use>
@@ -901,7 +909,6 @@
               </div>
     
               <div class="form-checkbox">
-                <input type="checkbox" id="agreeTerms" required>
                 <label for="agreeTerms">
                   Продолжая, вы соглашаетесь с нашими <a href="#">условиями использования</a> и <a href="#">политикой
                     конфиденциальности</a>
@@ -1212,7 +1219,7 @@
     <div class="thumbs thumbs-models">
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model1.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1229,8 +1236,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1269,7 +1279,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model2.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1286,8 +1296,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1326,7 +1339,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model3.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1343,8 +1356,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1383,7 +1399,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model4.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1400,8 +1416,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1440,7 +1459,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model5.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1457,8 +1476,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1497,7 +1519,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model1.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1514,8 +1536,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1554,7 +1579,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model2.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1571,8 +1596,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1611,7 +1639,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model3.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1628,8 +1656,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1668,7 +1699,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model4.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1685,8 +1716,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
@@ -1725,7 +1759,7 @@
         </div>      </div>
       <div class="col">
         <div class="thumb-models">
-          <a href="profile/model-profile.html" class="thumb-link">
+          <a href="single-model.html" class="thumb-link">
             <span class="box-img">
               <img src="./images/model5.png" class="thumb-img" alt="">
               <div class="model-flag">
@@ -1742,8 +1776,11 @@
                 <div class="subscribe-hover">
                   <span class="subscribe-text subscribe-text-unsubscribed">Подписаться</span>
                   <span class="subscribe-text subscribe-text-subscribed" style="display: none;">Отписаться</span>
-                  <svg class="subscribe-icon">
+                  <svg class="subscribe-icon subscribe-icon-unsubscribed">
                     <use xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="subscribe-icon subscribe-icon-subscribed" style="display: none;">
+                    <use xlink:href="#icon-star-crossed"></use>
                   </svg>
                 </div>
                 <!-- Subscribed state: checkmark -->
