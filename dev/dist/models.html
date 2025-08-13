@@ -1192,24 +1192,16 @@
       <h2 class="title-name">МОДЕЛИ</h2>
       <div class="sort-box">
         <div class="sort-box-wrapper">
-          <form action="#" class="sort-form">
+          <div class="sort-form" id="list_videos_most_recent_videos_sort_list">
             <div class="form-group">
-              <input type="radio" name="filter" value="new" id="sort-new" checked="checked">
-              <label for="sort-new">
-                Все
-              </label>
-
-              <input type="radio" name="filter" value="popular" id="sort-popular">
-              <label for="sort-popular">
-                Девушки
-              </label>
-
-              <input type="radio" name="filter" value="best" id="sort-best">
-              <label for="sort-best">
-                Парни
-              </label>
+              <a class="active" data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:post_date">Новые</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:video_viewed">Популярные</a>
+              <a data-action="ajax" data-container-id="list_videos_most_recent_videos_sort_list"
+                data-block-id="list_videos_most_recent_videos" data-parameters="sort_by:rating">Топовые</a>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

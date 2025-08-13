@@ -2147,6 +2147,22 @@ h2 {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .modal-container {
+    position: relative;
+    padding: 80px 20px 30px;
+  }
+
+  #loginModal .modal-form {
+    position: static;
+  }
+
+  #loginModal .modal-close {
+    top: 20px;
+    right: 20px;
+  }
+}
+
 /* Modal Width Responsive - Mobile */
 @media screen and (max-width: 768px) {
   .modal-container {
@@ -2210,11 +2226,6 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     text-align: left;
-  }
-
-  #loginModal .modal-close {
-    top: 20px;
-    right: 20px;
   }
   
   #loginModal .login-terms {
