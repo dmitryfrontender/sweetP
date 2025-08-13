@@ -216,8 +216,8 @@ function desktopSearch() {
 			$searchInput.blur();
 		} else {
 			// Enter search mode
-			$searchContainer.addClass('search-active');
 			$mainNav.addClass('nav-hidden');
+			$searchContainer.addClass('search-active');
 			setTimeout(() => $searchInput.focus(), 100);
 		}
 	});
